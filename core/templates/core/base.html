@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ERP System{% endblock %}</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <!-- SAP Icons Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind Configuration for SAP S/4 HANA Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sap-blue': '#0a6ed1',
+                        'sap-dark-blue': '#0854a0',
+                        'sap-light-blue': '#d1e8ff',
+                        'sap-gold': '#f0ab00',
+                        'sap-red': '#bb0000',
+                        'sap-green': '#107e3e',
+                        'sap-gray': '#edeff0',
+                        'sap-text': '#32363a',
+                        'sap-border': '#d9d9d9',
+                    },
+                    fontFamily: {
+                        'sap': ['"72"', 'Arial', 'Helvetica', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="h-full font-sap">
+    <div class="min-h-full">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>

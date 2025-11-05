@@ -1,0 +1,632 @@
+<!-- Navigation Sidebar -->
+<nav class="bg-sap-dark-blue text-white w-64 min-h-screen flex-shrink-0 overflow-y-auto" id="sidebar">
+    <div class="p-4">
+        <!-- Logo -->
+        <div class="mb-8 pb-4 border-b border-sap-blue">
+            <h1 class="text-2xl font-bold text-white flex items-center">
+                <i class="fas fa-building mr-3"></i>
+                ERP System
+            </h1>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="space-y-1">
+            <!-- Home -->
+            <li>
+                <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <i class="fas fa-home w-5 mr-3"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <!-- Administrator -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-user-shield w-5 mr-3"></i>
+                        <span>Administrator</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-8 space-y-1">
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Role Management</a></li>
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Financial Year</a></li>
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Country</a></li>
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">State</a></li>
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">City</a></li>
+                </ul>
+            </li>
+
+            <!-- Sales -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-chart-line w-5 mr-3"></i>
+                        <span>Sales</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Master -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Master</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Customer</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Category of Work Order</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">WO Release & Dispatch Authority</a></li>
+                        </ul>
+                    </li>
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Enquiry</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Quotation</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Customer PO</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Work Order</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">WO Release</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">WO Dispatch</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Dispatch GunRail</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">WO Open/Close</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Design -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-pencil-ruler w-5 mr-3"></i>
+                        <span>Design</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Master -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Master</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">BoughtOut Category</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Item Master</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Unit Master</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">ECN Reason</a></li>
+                        </ul>
+                    </li>
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">BOM</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Slido Gunrail</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">ECN Unlock</a></li>
+                        </ul>
+                    </li>
+                    <!-- Report -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Report</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Item history</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Planning -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-calendar-alt w-5 mr-3"></i>
+                        <span>Planning</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Master -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Master</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Material Process</a></li>
+                        </ul>
+                    </li>
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">BOM</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Material -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-boxes w-5 mr-3"></i>
+                        <span>Material</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Master -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Master</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Business Nature</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Business Type</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Service Coverage</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Buyer</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Supplier</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Set Rate</a></li>
+                        </ul>
+                    </li>
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Scope Of Supplier</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Rate Lock/UnLock</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Purchase Requisition [PR]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Special Purpose Requisition [SPR]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Check SPR</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Approve SPR</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Purchase Order [PO]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Check PO</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Approve PO</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Authorize PO</a></li>
+                        </ul>
+                    </li>
+                    <!-- Report -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Report</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Rate Register</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Rate Lock/UnLock</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Material Forecasting</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Inward/Outward Register</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Search</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Project -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-project-diagram w-5 mr-3"></i>
+                        <span>Project</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Man Power Planning</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Project Planning</a></li>
+                        </ul>
+                    </li>
+                    <!-- Report -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Report</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Project Summary</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Reports -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-file-alt w-5 mr-3"></i>
+                        <span>Reports</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Reports</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Boughtout Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Boughtout Vendor</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Boughtout Assembly</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Manufacturing Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Manufacturing Vendor</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Manufacturing Assembly</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Inventory -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-warehouse w-5 mr-3"></i>
+                        <span>Inventory</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Master -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Master</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Item location</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">VEHICLE ENTRY</a></li>
+                        </ul>
+                    </li>
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">VEHICLE REGISTRATION FORM</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Goods Inward Note [GIN]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Goods Received Receipt [GRR]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Goods Service Note [GSN]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Material Requisition Slip [MRS]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Material Issue Note [MIN]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Material Return Note [MRN]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Delivery Challan</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Challan Summary</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Release WIS</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Dry / Actual WIS Run</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Closing Stock</a></li>
+                        </ul>
+                    </li>
+                    <!-- Reports -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Reports</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Stock Ledger</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Stock Statement</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Material Issue/Shortage list</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Moving-Non Moving Items</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Inward/Outward Register</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Search</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- QC -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-clipboard-check w-5 mr-3"></i>
+                        <span>QC</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Goods Quality Note [GQN]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Material Return Quality Note [MRQN]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Authorize MCN</a></li>
+                        </ul>
+                    </li>
+                    <!-- Report -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Report</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Goods Rejection Note [GRN]</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Scrap Material</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Accounts -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-calculator w-5 mr-3"></i>
+                        <span>Accounts</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Master -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Master</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Account Heads</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">CGST/IGST</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">SGST</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Excisable Commodity</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Warranty Terms</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Payment Terms</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Cash/Bank Entry</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">IOU Reasons</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Bank</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Payment Mode</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Asset</a></li>
+                        </ul>
+                    </li>
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Sales Invoice</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">IOU Payment/Receipt</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Bill Booking</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Authorize Bill Booking</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">POLICY</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Cash Voucher</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Payment/Receipt Voucher</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Advice</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Creditors/Debtors</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Bank Reconciliation</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Balance Sheet</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Asset Register</a></li>
+                        </ul>
+                    </li>
+                    <!-- Report -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Report</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Sales Register</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Purchase Register</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Pending For Invoice</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">PVEV Search</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Cash/Bank Register</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- HR -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-users w-5 mr-3"></i>
+                        <span>HR</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Master -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Master</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Business Group</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Designation</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Department</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Grade</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">SwapCard No</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Corporate Mobile</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Intercom Ext</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Gate Pass Types</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Holiday</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">PF Slab</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Working Days</a></li>
+                        </ul>
+                    </li>
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">News And Notices</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Offer Letter</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Staff</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">DOCUMENTS</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Mobile Bill</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">ASSET LIST</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Authorize Gate Pass</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Bank Loan</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">PayRoll</a></li>
+                        </ul>
+                    </li>
+                    <!-- Report -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Report</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Staff</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- MR -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-briefcase w-5 mr-3"></i>
+                        <span>MR</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Master</a></li>
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Format/Documents</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Report</a></li>
+                </ul>
+            </li>
+
+            <!-- MIS -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-chart-bar w-5 mr-3"></i>
+                        <span>MIS</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <!-- Transaction -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Transaction</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Financial Budget</a></li>
+                        </ul>
+                    </li>
+                    <!-- Report -->
+                    <li x-data="{ open: false }">
+                        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2 rounded hover:bg-sap-blue text-sm">
+                            <span>Report</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                        </button>
+                        <ul x-show="open" x-transition class="ml-4 mt-1 space-y-1">
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Sales Distribution</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Purchase</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Sales</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">BOM Costing</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Purchase/Sales Computation</a></li>
+                            <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">QA Report</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Support -->
+            <li x-data="{ open: false }" class="relative">
+                <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <div class="flex items-center">
+                        <i class="fas fa-life-ring w-5 mr-3"></i>
+                        <span>Support</span>
+                    </div>
+                    <i class="fas fa-chevron-down text-xs transition-transform" :class="{ 'rotate-180': open }"></i>
+                </button>
+                <ul x-show="open" x-transition class="mt-1 ml-4 space-y-1">
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">Change Password</a></li>
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">System Credentials</a></li>
+                    <li><a href="#" class="block px-4 py-2 rounded hover:bg-sap-blue text-sm">ECN</a></li>
+                </ul>
+            </li>
+
+            <!-- GatePass -->
+            <li>
+                <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <i class="fas fa-id-card w-5 mr-3"></i>
+                    <span>GatePass</span>
+                </a>
+            </li>
+
+            <!-- MyScheduler -->
+            <li>
+                <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <i class="fas fa-calendar-check w-5 mr-3"></i>
+                    <span>MyScheduler</span>
+                </a>
+            </li>
+
+            <!-- IOU -->
+            <li>
+                <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <i class="fas fa-file-invoice-dollar w-5 mr-3"></i>
+                    <span>IOU</span>
+                </a>
+            </li>
+
+            <!-- ChatRoom -->
+            <li>
+                <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <i class="fas fa-comments w-5 mr-3"></i>
+                    <span>ChatRoom</span>
+                </a>
+            </li>
+
+            <!-- ModuleList -->
+            <li>
+                <a href="#" class="flex items-center px-4 py-3 rounded-lg hover:bg-sap-blue transition-colors duration-200">
+                    <i class="fas fa-list w-5 mr-3"></i>
+                    <span>ModuleList</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Alpine.js for dropdown functionality -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
