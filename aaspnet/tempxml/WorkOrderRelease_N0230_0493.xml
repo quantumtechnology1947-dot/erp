@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2735</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Fabricated Structure 10M (L)x 2M (W)x 8M (H)</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0230</WONo>
+    <WRNo>0493</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2736</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Railing System 10M (L) with 3 Cross Rails</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0230</WONo>
+    <WRNo>0493</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2737</Id>
+    <ItemCode>3</ItemCode>
+    <Description>Electric Hoist - 0.5T</Description>
+    <Qty>3</Qty>
+    <ReleasedQty>3</ReleasedQty>
+    <WONo>N0230</WONo>
+    <WRNo>0493</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2738</Id>
+    <ItemCode>4</ItemCode>
+    <Description>Inversion Table</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0230</WONo>
+    <WRNo>0493</WRNo>
+  </Table1>
+</NewDataSet>

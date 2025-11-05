@@ -1,0 +1,138 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3126</Id>
+    <ItemCode>-</ItemCode>
+    <Description>LONG RAIL 44 X 2 NOS</Description>
+    <Qty>88</Qty>
+    <ReleasedQty>88</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3127</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 1.5 X 11 NOS</Description>
+    <Qty>20.5</Qty>
+    <ReleasedQty>20.5</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3128</Id>
+    <ItemCode>-</ItemCode>
+    <Description>LONG RAIL 44 X 2 NOS</Description>
+    <Qty>88</Qty>
+    <ReleasedQty>88</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3129</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 1.5 X 7 NOS</Description>
+    <Qty>10.5</Qty>
+    <ReleasedQty>10.5</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3130</Id>
+    <ItemCode>-</ItemCode>
+    <Description>LONG RAIL 8.2 X 2 NOS</Description>
+    <Qty>16.4</Qty>
+    <ReleasedQty>16.4</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3131</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 1.5 X 2 NOS</Description>
+    <Qty>3</Qty>
+    <ReleasedQty>3</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3132</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 1.5 X 1 NOS</Description>
+    <Qty>1.5</Qty>
+    <ReleasedQty>1.5</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3133</Id>
+    <ItemCode>-</ItemCode>
+    <Description>TROLLEY SET</Description>
+    <Qty>60</Qty>
+    <ReleasedQty>60</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3134</Id>
+    <ItemCode>-</ItemCode>
+    <Description>LONG RAIL 32 X 2 NOS</Description>
+    <Qty>62</Qty>
+    <ReleasedQty>62</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3135</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 2.3 X 7 NOS</Description>
+    <Qty>16.1</Qty>
+    <ReleasedQty>16.1</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3136</Id>
+    <ItemCode>-</ItemCode>
+    <Description>MONORAIL  ( 72 X 72 MM)</Description>
+    <Qty>60</Qty>
+    <ReleasedQty>60</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3137</Id>
+    <ItemCode>-</ItemCode>
+    <Description>LONG RAIL 3.6 X 2 NOS</Description>
+    <Qty>7.2</Qty>
+    <ReleasedQty>7.2</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3138</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 1.5 X 2 NOS</Description>
+    <Qty>3</Qty>
+    <ReleasedQty>3</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3139</Id>
+    <ItemCode>-</ItemCode>
+    <Description>MONORAIL (72 x 72 mm)</Description>
+    <Qty>60</Qty>
+    <ReleasedQty>60</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3140</Id>
+    <ItemCode>-</ItemCode>
+    <Description>MONORAIL CROSS TROLLEY</Description>
+    <Qty>24</Qty>
+    <ReleasedQty>24</ReleasedQty>
+    <WONo>S0206</WONo>
+    <WRNo>0583</WRNo>
+  </Table1>
+</NewDataSet>

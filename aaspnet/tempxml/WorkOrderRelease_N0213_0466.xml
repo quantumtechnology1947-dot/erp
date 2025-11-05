@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2644</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Handy Fixture-512361000109</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0213</WONo>
+    <WRNo>0466</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2645</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Handy Stud Welding Fixture - 512361100105</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0213</WONo>
+    <WRNo>0466</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2646</Id>
+    <ItemCode>3</ItemCode>
+    <Description>Modification in Existing Weld Fixture- 543862200131</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0213</WONo>
+    <WRNo>0466</WRNo>
+  </Table1>
+</NewDataSet>

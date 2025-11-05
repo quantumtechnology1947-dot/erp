@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/newerp/global.asax" hash="ffffffffc8d3d242" filehash="ffffc390a195a4f1" flags="150000" assembly="newerp_deploy" type="ASP.global_asax">
+  <filedeps>
+    <filedep name="/newerp/global.asax" />
+  </filedeps>
+</preserve>

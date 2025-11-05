@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1292</Id>
+    <ItemCode>1</ItemCode>
+    <Description>LONG RAIL C63 (6MTR X 16 LINES = 96MTR)</Description>
+    <IssuedQty>96</IssuedQty>
+    <DispatchQty>96</DispatchQty>
+    <WONo>S0084</WONo>
+    <DANo>0328</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1293</Id>
+    <ItemCode>2</ItemCode>
+    <Description>LONG RAIL C63 (2MTR X 2 LINES = 4MTR)</Description>
+    <IssuedQty>4</IssuedQty>
+    <DispatchQty>4</DispatchQty>
+    <WONo>S0084</WONo>
+    <DANo>0328</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1294</Id>
+    <ItemCode>3</ItemCode>
+    <Description>HOIST TROLLEY</Description>
+    <IssuedQty>20</IssuedQty>
+    <DispatchQty>20</DispatchQty>
+    <WONo>S0084</WONo>
+    <DANo>0328</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

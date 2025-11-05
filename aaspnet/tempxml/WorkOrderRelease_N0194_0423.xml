@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2461</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Dismantling &amp; Reassembling of Cross Belt
+Sampler</Description>
+    <Qty>25000</Qty>
+    <ReleasedQty>25000</ReleasedQty>
+    <WONo>N0194</WONo>
+    <WRNo>0423</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2462</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Paint removing and repainting of Cross Belt
+Sampler</Description>
+    <Qty>37500</Qty>
+    <ReleasedQty>37500</ReleasedQty>
+    <WONo>N0194</WONo>
+    <WRNo>0423</WRNo>
+  </Table1>
+</NewDataSet>

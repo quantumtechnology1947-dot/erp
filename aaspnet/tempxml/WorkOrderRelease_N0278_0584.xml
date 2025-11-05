@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3205</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Trolley full assembled</Description>
+    <Qty>8</Qty>
+    <ReleasedQty>8</ReleasedQty>
+    <WONo>N0278</WONo>
+    <WRNo>0584</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3206</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Trolleys semi assembled</Description>
+    <Qty>26</Qty>
+    <ReleasedQty>26</ReleasedQty>
+    <WONo>N0278</WONo>
+    <WRNo>0584</WRNo>
+  </Table1>
+</NewDataSet>

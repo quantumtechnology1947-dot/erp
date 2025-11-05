@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2440</Id>
+    <ItemCode>N78TOOLASSIST</ItemCode>
+    <Description>tool load assist for loading of  cutting tool in CNC Mazak machine</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>S0173</WONo>
+    <WRNo>0412</WRNo>
+  </Table1>
+</NewDataSet>

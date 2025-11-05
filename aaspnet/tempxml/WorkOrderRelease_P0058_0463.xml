@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2615</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Magnetic Plunger</Description>
+    <Qty>6</Qty>
+    <ReleasedQty>6</ReleasedQty>
+    <WONo>P0058</WONo>
+    <WRNo>0463</WRNo>
+  </Table1>
+</NewDataSet>

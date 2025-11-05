@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3004</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Cont Modn Tail Gate Outer lower 5JL827106</Description>
+    <Qty>44</Qty>
+    <ReleasedQty>44</ReleasedQty>
+    <WONo>S0199</WONo>
+    <WRNo>0557</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3005</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Cont Modn Tail Gate Outer lower 5JN827106</Description>
+    <Qty>118</Qty>
+    <ReleasedQty>118</ReleasedQty>
+    <WONo>S0199</WONo>
+    <WRNo>0557</WRNo>
+  </Table1>
+</NewDataSet>

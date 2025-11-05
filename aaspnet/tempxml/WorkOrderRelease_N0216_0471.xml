@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2665</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Multi Utility Trolley</Description>
+    <Qty>6</Qty>
+    <ReleasedQty>6</ReleasedQty>
+    <WONo>N0216</WONo>
+    <WRNo>0471</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2666</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Caster Wheel with Base Suppt Assembly</Description>
+    <Qty>6</Qty>
+    <ReleasedQty>6</ReleasedQty>
+    <WONo>N0216</WONo>
+    <WRNo>0471</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2762</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Test bed automation and control system hardware
+dismantling, refurbishment, shifting &amp; re-installation &amp; storage (1 Test cell)</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>E0046</WONo>
+    <WRNo>0511</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2763</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Test bed automation system hardware dismantling
+&amp; storage (4 Test cells)</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>E0046</WONo>
+    <WRNo>0511</WRNo>
+  </Table1>
+</NewDataSet>

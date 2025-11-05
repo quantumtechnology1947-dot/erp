@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2525</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Slido Rail C63</Description>
+    <Qty>18</Qty>
+    <ReleasedQty>18</ReleasedQty>
+    <WONo>S0181</WONo>
+    <WRNo>0434</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2526</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Load Trolley</Description>
+    <Qty>14</Qty>
+    <ReleasedQty>14</ReleasedQty>
+    <WONo>S0181</WONo>
+    <WRNo>0434</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,43 @@
+﻿/* table style */
+table.yui-datatable-theme
+{	text-align: left;
+}
+
+/* common cell styles */
+.yui-datatable-theme th, .yui-datatable-theme td
+{
+    cursor:default;
+}
+
+/* header cell styles */
+.yui-datatable-theme th
+{
+    background: url(../images/sprite.png) repeat-x 0px 0px;
+    border-color: #DBDBDB #DBDBDB #DBDBDB #DBDBDB;
+    border-style: solid solid solid none;
+    border-width: 1px 1px 1px medium;
+    color: #000000;
+    padding: 2px 1px 2px 2px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+/* data cell style */
+.yui-datatable-theme td
+{
+    border-color: #DBDBDB #DBDBDB #DBDBDB #DBDBDB;
+    font-size:11px;
+    vertical-align:text-top;
+}
+
+/* alternating row style */
+
+/* mouseover row style */
+
+/* select row style */
+.yui-datatable-theme .row-select
+{ 
+}
+
+ 
+

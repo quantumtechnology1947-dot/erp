@@ -1,0 +1,73 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+using CrystalDecisions.CrystalReports.Engine;
+
+public partial class Module_Accounts_Transactions_Budget_WithMaterial_Print : System.Web.UI.Page
+{
+      clsFunctions fun = new clsFunctions();
+
+    private ReportDocument report = new ReportDocument();
+    protected void Page_Load(object sender, EventArgs e)
+    { 
+        string connStr = fun.Connection();
+            SqlConnection con = new SqlConnection(connStr);
+
+        string c = Request.QueryString["Id"];
+       
+        try
+        {
+            SqlCommand cmd = new SqlCommand("Select   tblACC_Budget_Transactions.Id,REPLACE(CONVERT (varchar, CONVERT (datetime, SUBSTRING(tblACC_Budget_Transactions.SysDate , CHARINDEX('-',tblACC_Budget_Transactions.SysDate ) + 1, 2) + '-' + LEFT (tblACC_Budget_Transactions.SysDate , CHARINDEX('-', tblACC_Budget_Transactions.SysDate ) - 1) + '-' + RIGHT (tblACC_Budget_Transactions.SysDate , CHARINDEX('-', REVERSE(tblACC_Budget_Transactions.SysDate )) - 1)), 103), '/', '-') AS SysDate,tblACC_Budget_Transactions.SysTime,tblACC_Budget_Transactions.BudgetCode,  AccHead.Description+'-'+ AccHead.Symbol  AS Description,tblACC_Budget_Transactions.Amount  from  AccHead ,tblACC_Budget_Transactions where tblACC_Budget_Transactions.BudgetCode=AccHead.Id  and  AccHead.Id='" + c + "'", con);
+
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            //GridView2.DataSource = ds;
+            //GridView2.DataBind();
+            //lblDesc.Text = ds.Tables[0].Rows[0]["Description"].ToString();
+
+            string date = ds.Tables[0].Rows[0]["SysDate"].ToString();
+            string time = ds.Tables[0].Rows[0]["SysTime"].ToString();
+            string desc = ds.Tables[0].Rows[0]["Description"].ToString();
+            string amt = ds.Tables[0].Rows[0]["Amount"].ToString();
+
+            string reportPath = Server.MapPath("Budger_Labour_Print.rpt.rpt");
+            report.Load(reportPath);
+            report.SetDataSource(ds);
+
+            report.SetParameterValue("BudgetCode", c);
+            report.SetParameterValue("SysDate", date);
+            report.SetParameterValue("SysTime", time);
+            report.SetParameterValue("Description", desc);
+            report.SetParameterValue("Amount", amt);
+
+
+            CrystalReportViewer1.ReportSource = report;
+
+        }
+        catch (Exception ex)
+        {
+        }
+        }
+    protected void Page_UnLoad(object sender, EventArgs e)
+    {
+        this.CrystalReportViewer1.Dispose();
+        this.CrystalReportViewer1 = null;
+        report.Close();
+        report.Dispose();
+        GC.Collect();
+    }
+
+    }
+

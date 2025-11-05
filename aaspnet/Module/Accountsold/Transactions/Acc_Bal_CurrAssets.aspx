@@ -1,0 +1,203 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Acc_Bal_CurrAssets.aspx.cs" Inherits="Module_Accounts_Transactions_Acc_Bal_CurrAssets" Title="ERP" Theme="Default" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+ <link href="../../../Css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/styles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style3
+        {
+            text-align: right;
+        }
+        .style4
+        {
+            font-weight: bold;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cp3" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cp1" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cp2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="MainContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+
+ <table cellpadding="0" cellspacing="0" width="100%" >
+        <tr>
+            <td align="left" valign="middle" 
+                style="background:url(../../../images/hdbg.JPG)" height="21" 
+                class="fontcsswhite"><b>&nbsp;Balance Sheet</b></td>
+        </tr>
+        <tr>
+            <td height="25" width="100%" align="center" valign="top">
+                <table align="left" cellpadding="0" cellspacing="0" width="600">
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" width="48%">
+                            <b>
+                <asp:Label ID="Label2" runat="server" Text="Liabilities"></asp:Label>
+                            </b>
+                        </td>
+                        <td height="25" align="right" width="25%">
+                            <b>Debit</b></td>
+                        <td width="25%" align="right">
+                            <b>Credit</b></td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                        <td bgcolor="#CCFFFF" height="25" align="left">
+                            <asp:LinkButton ID="LnkClosingStk" runat="server" Enabled="False">Closing Stock</asp:LinkButton>
+                        </td>
+                        <td bgcolor="#CCFFFF" height="25" align="right">
+                            <asp:Label ID="lblClStock" runat="server" Font-Bold="True" Text="0"></asp:Label>
+                        </td>
+                        <td align="right" bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left">
+                            <asp:LinkButton ID="LnkDeposit" runat="server" Enabled="False">Deposits (Asset)</asp:LinkButton>
+                        </td>
+                        <td height="25">
+                            &nbsp;</td>
+                        <td align="right">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                        <td bgcolor="#CCFFFF" height="25" align="left">
+                <asp:LinkButton ID="LnkLnA" runat="server" Enabled="False">Loans &amp; Advances (Asset)</asp:LinkButton>
+                        </td>
+                        <td bgcolor="#CCFFFF" height="25">
+                            &nbsp;</td>
+                        <td align="right" bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left">
+                            <asp:LinkButton ID="lnkSundry" runat="server" PostBackUrl="Acc_Sundry_CustList.aspx">Sundry Debtors</asp:LinkButton>
+                        </td>
+                        <td height="25" align="right">
+                <asp:Label ID="lblSD_dr" runat="server" Text="0" Font-Bold="True"></asp:Label>
+                        </td>
+                        <td align="right">
+                <asp:Label ID="lblSD_cr" runat="server" Text="0" Font-Bold="True"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                        <td bgcolor="#CCFFFF" height="25" align="left">
+                            <asp:LinkButton ID="LnkCash" runat="server">Cash- in -hand</asp:LinkButton>
+                        </td>
+                        <td bgcolor="#CCFFFF" height="25">
+                            &nbsp;</td>
+                        <td align="right" bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left">
+                            <asp:LinkButton ID="lnkBAcc" runat="server" Enabled="False">Bank Accounts</asp:LinkButton>
+                        </td>
+                        <td height="25">
+                            &nbsp;</td>
+                        <td align="right">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left" bgcolor="#CCFFFF">
+                            <asp:LinkButton ID="lnkBWTA" runat="server" Enabled="False">Balance with Tax Authorities</asp:LinkButton>
+                        </td>
+                        <td height="25" bgcolor="#CCFFFF" class="style3">
+                            &nbsp;</td>
+                        <td align="right" bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left">
+                            <asp:LinkButton ID="lnkPE" runat="server" Enabled="False">Prepaid Expences</asp:LinkButton>
+                        </td>
+                        <td height="25">
+                            &nbsp;</td>
+                        <td align="right">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left" bgcolor="#CCFFFF">
+                            <asp:LinkButton ID="lnkAI" runat="server" Enabled="False">Accured Interest</asp:LinkButton>
+                        </td>
+                        <td height="25" bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                        <td align="right" bgcolor="#CCFFFF">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left">
+                            <asp:LinkButton ID="lnkTDSRFS" runat="server" Enabled="False">TDS Recoverable From Suppliers</asp:LinkButton>
+                        </td>
+                        <td height="25">
+                            &nbsp;</td>
+                        <td align="right">
+                            &nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left">
+                            &nbsp;</td>
+                        <td height="25">
+                            &nbsp;</td>
+                        <td align="right">
+                            &nbsp;</td>
+                    </tr>
+                   
+                    <tr>
+                        <td>
+                            &nbsp;</td>
+                        <td height="25" align="left">
+                <asp:Label ID="Label4" runat="server"  Text="Total" CssClass="style4"></asp:Label>
+                        </td>
+                        <td height="25">
+                            &nbsp;</td>
+                        <td align="right">
+                <asp:Label ID="Amt_CurrentLiab0" runat="server" Text="0" Font-Bold="true"></asp:Label>
+                        </td>
+                    </tr>
+                   
+                </table>
+            </td>
+        </tr>
+        </table>
+  
+  <div>
+  
+  
+  
+  </div>
+  
+</asp:Content>
+<asp:Content ID="Content8" ContentPlaceHolderID="ContentPlaceHolder4" Runat="Server">
+</asp:Content>
+

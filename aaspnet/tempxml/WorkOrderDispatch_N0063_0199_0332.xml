@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1299</Id>
+    <ItemCode>10</ItemCode>
+    <Description>WELDING FIXTURES FOR 1 CELL</Description>
+    <IssuedQty>4</IssuedQty>
+    <DispatchQty>4</DispatchQty>
+    <WONo>N0063</WONo>
+    <DANo>0332</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

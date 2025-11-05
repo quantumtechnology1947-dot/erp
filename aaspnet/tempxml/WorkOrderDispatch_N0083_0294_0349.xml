@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1351</Id>
+    <ItemCode>10</ItemCode>
+    <Description>Structure Assly LH</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0083</WONo>
+    <DANo>0349</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1352</Id>
+    <ItemCode>20</ItemCode>
+    <Description>Structure  Assly RH</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0083</WONo>
+    <DANo>0349</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1353</Id>
+    <ItemCode>30</ItemCode>
+    <Description>Front Frame Structure Assembly</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0083</WONo>
+    <DANo>0349</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1354</Id>
+    <ItemCode>40</ItemCode>
+    <Description>Main Front Upper Assembly</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0083</WONo>
+    <DANo>0349</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

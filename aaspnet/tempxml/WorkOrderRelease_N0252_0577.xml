@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3093</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Frame assembly platform</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0252</WONo>
+    <WRNo>0577</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3094</Id>
+    <ItemCode>-</ItemCode>
+    <Description>weighing machine stand</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0252</WONo>
+    <WRNo>0577</WRNo>
+  </Table1>
+</NewDataSet>

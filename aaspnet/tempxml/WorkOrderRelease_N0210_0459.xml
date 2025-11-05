@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2602</Id>
+    <ItemCode>5230003</ItemCode>
+    <Description>5230003- Joint Connector</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0210</WONo>
+    <WRNo>0459</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2603</Id>
+    <ItemCode>5230004</ItemCode>
+    <Description>Stopper Pin</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>N0210</WONo>
+    <WRNo>0459</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2604</Id>
+    <ItemCode>5230005</ItemCode>
+    <Description>Stopper Plate</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>N0210</WONo>
+    <WRNo>0459</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2605</Id>
+    <ItemCode>5230100</ItemCode>
+    <Description>Bearing Housing</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0210</WONo>
+    <WRNo>0459</WRNo>
+  </Table1>
+</NewDataSet>

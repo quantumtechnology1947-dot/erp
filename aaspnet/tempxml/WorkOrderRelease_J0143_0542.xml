@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2870</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Pallet modification for Outer door front LH&amp;RH</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0143</WONo>
+    <WRNo>0542</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2871</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Pallet Modification for Outer Door Rear LH&amp;RH</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0143</WONo>
+    <WRNo>0542</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2872</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Pallet Modification for Side Panel LH&amp;RH</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0143</WONo>
+    <WRNo>0542</WRNo>
+  </Table1>
+</NewDataSet>

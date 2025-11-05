@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2647</Id>
+    <ItemCode>5226282</ItemCode>
+    <Description>CROSS RAIL SWELL COUPLER</Description>
+    <Qty>20</Qty>
+    <ReleasedQty>20</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0467</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2648</Id>
+    <ItemCode>5226281</ItemCode>
+    <Description>Long Rail Joint Coupler</Description>
+    <Qty>6</Qty>
+    <ReleasedQty>6</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0467</WRNo>
+  </Table1>
+</NewDataSet>

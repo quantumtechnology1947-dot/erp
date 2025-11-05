@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2468</Id>
+    <ItemCode>19F919</ItemCode>
+    <Description>UNIT MB-20-02 (LH+RH) 19F919</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0112</WONo>
+    <WRNo>0432</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2469</Id>
+    <ItemCode>19F919</ItemCode>
+    <Description>UNIT MB-20-03 (LH+RH) 19F919</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0112</WONo>
+    <WRNo>0432</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2470</Id>
+    <ItemCode>19F919</ItemCode>
+    <Description>UNIT MB-20-04 (LH+RH) 19F919</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0112</WONo>
+    <WRNo>0432</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2471</Id>
+    <ItemCode>19F919</ItemCode>
+    <Description>UNIT MB-20-05 (LH+RH) 19F919</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0112</WONo>
+    <WRNo>0432</WRNo>
+  </Table1>
+</NewDataSet>

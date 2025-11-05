@@ -1,0 +1,180 @@
+﻿.fontcss {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000000;
+	text-decoration: none;
+	
+}
+.fontcsswhite
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.box1 {
+border: 1px solid #006EC3;
+}
+.box2 {
+border: 1px solid #7B01BA;
+}
+.box3 {
+border: 1px solid #C5C5C5;
+
+}
+.box4 {
+border: 1px solid #198F02;
+}
+.box5 {
+ font-size: 11px; background-color: #FFFFFF; border: 0px solid #BBBBBB;
+}
+
+.redbox 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+    color: #FFFFFF;
+	font-size: 11px; background-color:#FF0000;
+	border: 1px solid #FD80FA;
+	height: 19px;
+}
+
+.Rdpane
+{
+	position:relative;
+}
+.almt2{ visibility : hidden; position:relative; margin : 0px !important;padding: 0px; cursor :default; overflow :auto;z-index:1; width:350px!important; }
+
+.almt{ visibility : hidden; position:relative; margin : 0px !important;padding: 0px; cursor :default; overflow :auto;z-index:1; }
+.bg{background-color:#037978; color:#FFFFFF;}
+.bgtext{background-color:#24C1BF; color:#FFFFFF; font-weight:bold; }
+
+ 
+/*Calendar Control CSS*/
+.cal_Theme1 .ajax__calendar_container   {
+background-color: #DEF1F4;
+border:solid 1px #77D5F7;
+width:250px;
+height:230px;
+
+}
+
+.cal_Theme1 .ajax__calendar_header  {
+background-color: #ffffff;
+margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev    {
+color: #004080;
+padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body    {
+background-color: #ffffff;
+border: solid 1px #77D5F7;
+width:250px;
+height:180px;
+}
+
+.cal_Theme1 .ajax__calendar_dayname {
+text-align:center;
+font-weight:bold;
+margin-bottom: 4px;
+margin-top: 2px;
+color: #004080;
+}
+
+.cal_Theme1 .ajax__calendar_day {
+color: #004080;
+text-align:center;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme1 .ajax__calendar_active  {
+color: #004080;
+font-weight: bold;
+background-color: #DEF1F4;
+}
+
+.cal_Theme1 .ajax__calendar_today   {
+font-weight:bold;
+}
+
+.cal_Theme1 .ajax__calendar_other,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+color: #bbbbbb;
+}
+
+
+/*-----*/
+/*Calendar Control CSS*/
+.cal_Theme2 .ajax__calendar_container   {
+background-color: #DEF1F4;
+border:solid 1px #77D5F7;
+z-index:5000000;
+}
+
+.cal_Theme2 .ajax__calendar_header  {
+background-color: #ffffff;
+margin-bottom: 4px;
+}
+
+.cal_Theme2 .ajax__calendar_title,
+.cal_Theme2 .ajax__calendar_next,
+.cal_Theme2 .ajax__calendar_prev    {
+color: #004080;
+padding-top: 3px;
+}
+
+.cal_Theme2 .ajax__calendar_body    {
+background-color: #ffffff;
+border: solid 1px #77D5F7;
+
+}
+
+.cal_Theme2 .ajax__calendar_dayname {
+text-align:center;
+font-weight:bold;
+margin-bottom: 4px;
+margin-top: 2px;
+color: #004080;
+}
+
+.cal_Theme2 .ajax__calendar_day {
+color: #004080;
+text-align:center;
+}
+
+.cal_Theme2 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme2 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme2 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme2 .ajax__calendar_active  {
+color: #004080;
+font-weight: bold;
+background-color: #DEF1F4;
+}
+
+.cal_Theme2 .ajax__calendar_today   {
+font-weight:bold;
+}
+
+.cal_Theme2 .ajax__calendar_other,
+.cal_Theme2 .ajax__calendar_hover .ajax__calendar_today,
+.cal_Theme2 .ajax__calendar_hover .ajax__calendar_title {
+color: #bbbbbb;
+}
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1365</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Turning devices and mounting fixture</Description>
+    <IssuedQty>4</IssuedQty>
+    <DispatchQty>4</DispatchQty>
+    <WONo>N0189</WONo>
+    <DANo>0354</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

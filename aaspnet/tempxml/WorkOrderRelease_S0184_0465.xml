@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2635</Id>
+    <ItemCode>5199233</ItemCode>
+    <Description>RAIL CROSS RAIL (4 MTR)</Description>
+    <Qty>4</Qty>
+    <ReleasedQty>4</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2636</Id>
+    <ItemCode>5195793</ItemCode>
+    <Description>RAIL CROSS TROLLEY</Description>
+    <Qty>12</Qty>
+    <ReleasedQty>12</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2637</Id>
+    <ItemCode>5195792</ItemCode>
+    <Description>RAIL HOIST TROLLEY</Description>
+    <Qty>6</Qty>
+    <ReleasedQty>6</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2638</Id>
+    <ItemCode>5195791</ItemCode>
+    <Description>RAIL LOAD TROLLEY FR SPOT GUN</Description>
+    <Qty>5</Qty>
+    <ReleasedQty>5</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2639</Id>
+    <ItemCode>5195679</ItemCode>
+    <Description>RAIL TOOL TROLLEY FR BALANCER</Description>
+    <Qty>5</Qty>
+    <ReleasedQty>5</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2640</Id>
+    <ItemCode>5195678</ItemCode>
+    <Description>RAIL I-BEAM CLAMP</Description>
+    <Qty>40</Qty>
+    <ReleasedQty>40</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2641</Id>
+    <ItemCode>5140130</ItemCode>
+    <Description>GANTRY RAIL STOPPER</Description>
+    <Qty>20</Qty>
+    <ReleasedQty>20</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2642</Id>
+    <ItemCode>5203890</ItemCode>
+    <Description>RAIL SAFETY WIRE ROPE</Description>
+    <Qty>50</Qty>
+    <ReleasedQty>50</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2643</Id>
+    <ItemCode>5226058</ItemCode>
+    <Description>RAIL - 6M LENGTH LONG RAIL</Description>
+    <Qty>12</Qty>
+    <ReleasedQty>12</ReleasedQty>
+    <WONo>S0184</WONo>
+    <WRNo>0465</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2755</Id>
+    <ItemCode>1</ItemCode>
+    <Description>SS304 SQ TUBE STAND ASSEMBLY ( FOR GF-100 ) WITH ASSEMBLY PART SET ( PR-200940 ) WITH D &amp; T &amp; POLISHING</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>J0131</WONo>
+    <WRNo>0508</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2756</Id>
+    <ItemCode>2</ItemCode>
+    <Description>SS304 SQ TUBE STAND ASSEMBLY ( FOR GF-100 ) WITH ASSEMBLY PART SET ( PR-201000 ) WITH D &amp; T &amp; POLISHING</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>J0131</WONo>
+    <WRNo>0508</WRNo>
+  </Table1>
+</NewDataSet>

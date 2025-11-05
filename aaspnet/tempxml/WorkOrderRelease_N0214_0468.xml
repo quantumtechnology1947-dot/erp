@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2652</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Handy Fixture for 267462100112</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0214</WONo>
+    <WRNo>0468</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2653</Id>
+    <ItemCode>2</ItemCode>
+    <Description>ECN Modification in existing Weld Fixt. 267462100112</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0214</WONo>
+    <WRNo>0468</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2654</Id>
+    <ItemCode>3</ItemCode>
+    <Description>ECN Modification &amp; correction of Inspection Fixt. 267462100112</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0214</WONo>
+    <WRNo>0468</WRNo>
+  </Table1>
+</NewDataSet>

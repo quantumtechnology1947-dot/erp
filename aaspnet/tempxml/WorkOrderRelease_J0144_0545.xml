@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2878</Id>
+    <ItemCode>6JM827105</ItemCode>
+    <Description>Modification of Pallets for Tail Gate outer Upper SK-SUV XLT</Description>
+    <Qty>62</Qty>
+    <ReleasedQty>62</ReleasedQty>
+    <WONo>J0144</WONo>
+    <WRNo>0545</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2879</Id>
+    <ItemCode>6JM827105</ItemCode>
+    <Description>Supply of New Pallets for Tail Gate Outer Upper SK-SUV XLT</Description>
+    <Qty>83</Qty>
+    <ReleasedQty>83</ReleasedQty>
+    <WONo>J0144</WONo>
+    <WRNo>0545</WRNo>
+  </Table1>
+</NewDataSet>

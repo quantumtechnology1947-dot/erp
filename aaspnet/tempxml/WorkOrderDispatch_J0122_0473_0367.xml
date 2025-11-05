@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1378</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Lifting Tackle-JIG-C105-0001-V00-016-0000</Description>
+    <IssuedQty>2</IssuedQty>
+    <DispatchQty>2</DispatchQty>
+    <WONo>J0122</WONo>
+    <DANo>0367</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1379</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Lifting Tackle-LIF-C235-0002-V00-001-0000</Description>
+    <IssuedQty>2</IssuedQty>
+    <DispatchQty>2</DispatchQty>
+    <WONo>J0122</WONo>
+    <DANo>0367</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2669</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Set of Fixtures for MBP FES BIW Welding Line.</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0217</WONo>
+    <WRNo>0472</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2905</Id>
+    <ItemCode>N77AMBALLROLLER</ItemCode>
+    <Description>Ball cage roller top plate with swing type arrangement for safety improvement</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>T0037</WONo>
+    <WRNo>0550</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2906</Id>
+    <ItemCode>N77AMKMORITILTING</ItemCode>
+    <Description>Tilting arrangement for safety improvement</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>T0037</WONo>
+    <WRNo>0550</WRNo>
+  </Table1>
+</NewDataSet>

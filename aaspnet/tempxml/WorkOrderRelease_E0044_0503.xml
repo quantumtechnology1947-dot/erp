@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2752</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Errection and Commissioning</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>E0044</WONo>
+    <WRNo>0503</WRNo>
+  </Table1>
+</NewDataSet>

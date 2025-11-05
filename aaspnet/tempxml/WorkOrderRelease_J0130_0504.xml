@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2751</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Supply of Electrical  Power supplly for PM Chamber at PSBU TCs.</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>J0130</WONo>
+    <WRNo>0504</WRNo>
+  </Table1>
+</NewDataSet>

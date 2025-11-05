@@ -1,0 +1,48 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3049</Id>
+    <ItemCode>-</ItemCode>
+    <Description>SPS-D-17 (1 HP)	1 PHASE</Description>
+    <Qty>250</Qty>
+    <ReleasedQty>250</ReleasedQty>
+    <WONo>A0001</WONo>
+    <WRNo>0565</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3050</Id>
+    <ItemCode>-</ItemCode>
+    <Description>SPS-D-13 ( 1 HP) 1 PHASE</Description>
+    <Qty>250</Qty>
+    <ReleasedQty>250</ReleasedQty>
+    <WONo>A0001</WONo>
+    <WRNo>0565</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3051</Id>
+    <ItemCode>-</ItemCode>
+    <Description>SPS-C-15 (3 HP)	1 PHASE</Description>
+    <Qty>250</Qty>
+    <ReleasedQty>250</ReleasedQty>
+    <WONo>A0001</WONo>
+    <WRNo>0565</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3052</Id>
+    <ItemCode>-</ItemCode>
+    <Description>T.P.03 (UPTO 7.5 HP, 3PH)	3 PHASE</Description>
+    <Qty>250</Qty>
+    <ReleasedQty>250</ReleasedQty>
+    <WONo>A0001</WONo>
+    <WRNo>0565</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3053</Id>
+    <ItemCode>-</ItemCode>
+    <Description>ASD-12	3 PHASE</Description>
+    <Qty>3500</Qty>
+    <ReleasedQty>3500</ReleasedQty>
+    <WONo>A0001</WONo>
+    <WRNo>0565</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3000</Id>
+    <ItemCode>-</ItemCode>
+    <Description>New Container Body Side LH 5JL809605</Description>
+    <Qty>50</Qty>
+    <ReleasedQty>50</ReleasedQty>
+    <WONo>J0153</WONo>
+    <WRNo>0556</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3001</Id>
+    <ItemCode>-</ItemCode>
+    <Description>New Container Body Side RH 5JL809606</Description>
+    <Qty>50</Qty>
+    <ReleasedQty>50</ReleasedQty>
+    <WONo>J0153</WONo>
+    <WRNo>0556</WRNo>
+  </Table1>
+</NewDataSet>

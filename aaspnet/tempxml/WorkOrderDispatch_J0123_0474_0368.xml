@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1380</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Posts 2000mm</Description>
+    <IssuedQty>273</IssuedQty>
+    <DispatchQty>273</DispatchQty>
+    <WONo>J0123</WONo>
+    <DANo>0368</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1381</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Posts 800mm</Description>
+    <IssuedQty>36</IssuedQty>
+    <DispatchQty>36</DispatchQty>
+    <WONo>J0123</WONo>
+    <DANo>0368</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1382</Id>
+    <ItemCode>3</ItemCode>
+    <Description>Fence 2000mm</Description>
+    <IssuedQty>243</IssuedQty>
+    <DispatchQty>243</DispatchQty>
+    <WONo>J0123</WONo>
+    <DANo>0368</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1383</Id>
+    <ItemCode>4</ItemCode>
+    <Description>Fence 800mm</Description>
+    <IssuedQty>34</IssuedQty>
+    <DispatchQty>34</DispatchQty>
+    <WONo>J0123</WONo>
+    <DANo>0368</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

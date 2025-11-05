@@ -1,0 +1,237 @@
+﻿<%@ page language="C#" masterpagefile="~/MasterPage.master" autoeventwireup="true" inherits="Module_Accounts_Transactions_MailMerge, newerp_deploy" title="ERP" theme="Default" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+    <link href="../../../Css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/yui-datatable.css" rel="stylesheet" type="text/css" />
+    <script src="../../../Javascript/loadingNotifier.js" type="text/javascript"></script>
+    <script src="../../../Javascript/PopUpMsg.js" type="text/javascript"></script>
+   
+   
+    
+    <style type="text/css">
+        .style2
+        {
+            height: 24px;
+        }
+        .style3
+        {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            line-height: normal;
+            font-weight: bold;
+            font-variant: normal;
+            text-transform: none;
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .style4
+        {
+            width: 100%;
+            float: left;
+        }
+        .style5
+        {
+            height: 24px;
+        }
+        .style6
+        {
+            font-weight: bold;
+        }
+    </style>
+   
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cp3" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cp1" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cp2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="MainContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+   <%-- <script type="text/javascript">
+var prm = Sys.WebForms.PageRequestManager.getInstance();
+//Raised before processing of an asynchronous postback starts and the postback request is sent to the server.
+prm.add_beginRequest(BeginRequestHandler);
+// Raised after an asynchronous postback is finished and control has been returned to the browser.
+prm.add_endRequest(EndRequestHandler);
+function BeginRequestHandler(sender, args) {
+//Shows the modal popup - the update progress
+var popup = $find('<%= modalPopup.ClientID %>');
+if (popup != null) {
+popup.show();
+}
+}
+
+function EndRequestHandler(sender, args) {
+//Hide the modal popup - the update progress
+var popup = $find('<%= modalPopup.ClientID %>');
+if (popup != null) {
+popup.hide();
+}
+}
+</script>
+    <div>  
+    <asp:UpdateProgress ID="UpdateProgress" runat="server">
+<ProgressTemplate>
+<asp:Image ID="Image1" ImageUrl="~/images/spinner-big.gif" AlternateText="Processing" runat="server" />
+</ProgressTemplate>
+</asp:UpdateProgress>
+<cc1:ModalPopupExtender ID="modalPopup" runat="server" TargetControlID="UpdateProgress"
+PopupControlID="UpdateProgress" BackgroundCssClass="modalPopup" />
+<asp:UpdatePanel ID="pnlData" runat="server" UpdateMode="Conditional">--%>
+<ContentTemplate>
+    <table align="left" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" width="100%" class="box3">
+                    <tr>
+                        <td colspan="2" style="background:url(../../../images/hdbg.JPG); height:21px" 
+                            class="style3" >&nbsp;Mail Merge</td>
+                    </tr>  
+                     <tr>
+    <td align="left">
+        
+            <asp:Panel ID="Panel1" runat="server" Height="400px" ScrollBars="Both">
+                <asp:GridView ID="SearchGridView1" runat="server" 
+    AllowPaging="False" AllowSorting="True" AutoGenerateColumns="False" 
+    CssClass="yui-datatable-theme" DataKeyNames="SupplierId" 
+    onpageindexchanging="SearchGridView1_PageIndexChanging" PageSize="20" 
+    RowStyle-HorizontalAlign="Center" Width="100%">
+                    <RowStyle 
+        HorizontalAlign="Center" />
+                    <Columns>
+                        <asp:TemplateField HeaderText="SN" 
+            ItemStyle-HorizontalAlign="Right">
+                            <ItemTemplate>
+                                <%# Container.DataItemIndex+1 %>
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Right" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Supplier Name">
+                            <ItemTemplate>
+                                <asp:Label ID="SupplierName" runat="server" Text='<%# Bind("SupplierName") %>'>
+                                </asp:Label>
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Left" Width="35%" />
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Code">
+                            <ItemTemplate>
+                                <asp:Label ID="SupplierId" runat="server" Text='<%# Bind("SupplierId") %>'>
+                                </asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Email Id">
+                            <ItemTemplate>
+                                <asp:Label ID="Email" 
+                                runat="server" Text='<%# Bind("Email") %>'></asp:Label>
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Left" />
+                        </asp:TemplateField>
+                    </Columns>
+                    <EmptyDataTemplate>
+                        <table class="fontcss" width="100%">
+                            <tr>
+                                <td align="center">
+                                    <asp:Label ID="Label1" runat="server" Font-Size="Larger" 
+                        ForeColor="maroon" Text="No data to display !"> </asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </EmptyDataTemplate>
+                </asp:GridView>
+            </asp:Panel>
+        
+                         </td>
+    <td align="left" valign="top" width="450">
+        <table align="left" cellpadding="0" cellspacing="0" class="style4">
+            <tr>
+                <td class="style5">
+&nbsp;
+                    <asp:Label ID="Label2" runat="server" CssClass="style6" Text="From:"></asp:Label>
+&nbsp;<asp:TextBox ID="txtFrom" runat="server" CssClass="box3" Width="350px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                        ControlToValidate="txtFrom" ErrorMessage="*" ValidationGroup="A"></asp:RequiredFieldValidator>
+                       <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                ControlToValidate="txtFrom" ErrorMessage="*" ValidationGroup="A" 
+                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                    <asp:Label ID="Label4" runat="server" CssClass="style6" Text="Subject:"></asp:Label>
+                    &nbsp;<asp:TextBox ID="txtSub" runat="server" CssClass="box3" Width="330px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                        ControlToValidate="txtSub" ErrorMessage="*" ValidationGroup="A"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td>
+&nbsp;
+                    <asp:Label ID="Label3" runat="server" CssClass="style6" Text="Message"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;<asp:TextBox ID="txtMsg" runat="server" CssClass="box3" Height="250px" 
+                        TextMode="MultiLine" Width="400px">Dear Sir/Mam,
+
+We request you to send Ledger statement F.Y 13-14 with stamp for statutory Audit of our company SYNERGYTECH AUTOMATION PVT. LTD. PUNE  Auditors required ledger statement copies to match the ledger for Balance – sheet F.Y.2013-2014.
+
+So Kindly forward us the ledger statement with stamp on or before 31st March 14 & please revert if you have any queries…
+
+
+Regards,
+
+ 
+Thanks & Regards,
+TEJAS LASURKAR.
+Finance & Accounts Dept.
+For Synergytech Automation Pvt.Ltd.
+Gat No.205,Kasurdi,Khed Shivapur,
+Off Pune Bangalore Highway,
+Pune - 412 205
+
+Email: tejas@synergytechs.com/account@synergytechs.com
+Web: www.synergytechs.com
+Cell: 9881147037.
+
+
+
+</asp:TextBox>
+                    &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                        ControlToValidate="txtMsg" ErrorMessage="*" ValidationGroup="A"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;<asp:Button ID="Button1" runat="server" CssClass="redbox" 
+                        onclick="Button1_Click" Text="Send Mail" ValidationGroup="A" />
+                    &nbsp;
+                    <asp:Label ID="lblerror" runat="server"></asp:Label>
+                </td>
+            </tr>
+        </table>
+                         </td>
+    </tr>
+                    </table>
+            </td>
+        </tr>
+        
+       
+
+    </table>
+    </ContentTemplate>
+    <%--</asp:UpdatePanel>
+    </div>--%>
+</asp:Content>
+<asp:Content ID="Content8" ContentPlaceHolderID="ContentPlaceHolder4" Runat="Server">
+</asp:Content>
+

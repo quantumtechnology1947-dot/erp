@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2739</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Long Rails</Description>
+    <Qty>240</Qty>
+    <ReleasedQty>240</ReleasedQty>
+    <WONo>S0189</WONo>
+    <WRNo>0494</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2740</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Cross Rail</Description>
+    <Qty>65</Qty>
+    <ReleasedQty>65</ReleasedQty>
+    <WONo>S0189</WONo>
+    <WRNo>0494</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2741</Id>
+    <ItemCode>3</ItemCode>
+    <Description>Trolley Set</Description>
+    <Qty>26</Qty>
+    <ReleasedQty>26</ReleasedQty>
+    <WONo>S0189</WONo>
+    <WRNo>0494</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,281 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Dashboard.aspx.cs" Inherits="Module_MIS_Transactions_Dashboard" EnableEventValidation="false" Title="ERP" Theme ="Default"  %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    
+    <link href="../../../Css/yui-datatable.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../../Javascript/loadingNotifier.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function OnChanged(sender, args)
+        {
+            ServerUtilities.SetTabIndex(sender.get_activeTabIndex());
+        }
+    </script>
+    <style type="text/css">
+        .style3
+        {
+            width: 100%;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cp3" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cp1" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cp2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="MainContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+    
+    <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="left" valign="middle"  scope="col"  
+                            style="background:url(../../../images/hdbg.JPG)" class="fontcsswhite" 
+                            height="21">
+                            &nbsp;<b>Create Budget</b></td>
+        </tr>
+        <tr>
+            <td>
+            
+            
+                <cc1:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" 
+                    Width="100%" AutoPostBack="True" 
+                    onactivetabchanged="TabContainer1_ActiveTabChanged">
+                    <cc1:TabPanel runat="server" HeaderText="With Material" ID="TabPanel1">
+                        <ContentTemplate>
+                            <table align="left" cellpadding="0" cellspacing="0" class="style3">
+                                <tr>
+                                    <td align="left">
+                                        <asp:GridView ID="GridView3" runat="server" AllowPaging="True" 
+                                            AutoGenerateColumns="False" CssClass="yui-datatable-theme" 
+                                            DataSourceID="LocalSqlServer0" onrowcommand="GridView3_RowCommand" 
+                                            onrowupdated="GridView3_RowUpdated" ShowFooter="True" Width="100%" 
+                                            onselectedindexchanged="GridView3_SelectedIndexChanged" PageSize="20">
+                                            <PagerSettings PageButtonCount="40" />
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="SN" SortExpression="Id">
+                                                    <ItemTemplate>
+                                                        <%# Container.DataItemIndex+1 %>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" />
+                                                </asp:TemplateField>                                              
+                                                
+                                                <asp:TemplateField>
+                
+                                                    <ItemTemplate>
+                                                        <asp:HyperLink ID="HyperLink2" runat="server" Text="Select" />
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Center" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="CK">
+                                                    <ItemTemplate>
+                                                        <asp:CheckBox ID="CheckBox2" runat="server" AutoPostBack="true" 
+                                                            OnCheckedChanged="CheckBox2_CheckedChanged" />
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Center" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Id" SortExpression="Id" Visible="False">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblId0" runat="server" Text='<%#Eval("Id") %>'> </asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Description" SortExpression="Description">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblDesc0" runat="server" Text='<%#Eval("Description") %>'>
+                                                        </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Left" Width="25%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Symbol" SortExpression="Symbol">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblSymbol0" runat="server" Text='<%#Eval("Symbol") %>'>
+                                                        </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Center" Width="5%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Total Budget" SortExpression="TotalBudget">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblTotalBudget0" runat="server"> </asp:Label>
+                                                         <asp:TextBox ID="TxtAmount0"  Width="129" runat="server" Visible="false">
+                                                        </asp:TextBox>
+                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
+                                                        ControlToValidate="TxtAmount0" ErrorMessage="*" ValidationExpression="^\d{1,15}(\.\d{0,3})?$" 
+                                                        ValidationGroup="B"></asp:RegularExpressionValidator>
+                                                    </ItemTemplate>
+                                                    <FooterTemplate>
+                                                        <asp:Button ID="BtnInsert0" runat="server" CommandName="Insert" 
+                                                            CssClass="redbox" Text="Insert" ValidationGroup="B"  /> 
+                                                    </FooterTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="PO" SortExpression="PO">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblPO0" runat="server"> </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Cash" SortExpression="Cash">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblCash0" runat="server"> </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Tax" SortExpression="Tax">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblTax0" runat="server"> </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Bal Budget" SortExpression="Amount">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblAmount0" runat="server"> </asp:Label>
+                                                       
+                                                    </ItemTemplate>
+                                                    
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <asp:SqlDataSource ID="LocalSqlServer0" runat="server" 
+                                            ConnectionString="<%$ connectionStrings:LocalSqlServer %>" 
+                                            SelectCommand="SELECT Id, Category, Description, Symbol, Abbrivation FROM AccHead WHERE (Category = 'With Material')">
+                                        </asp:SqlDataSource>
+                                        <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#3333FF" 
+                                            Text="Label"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ContentTemplate>
+                    </cc1:TabPanel>
+                    <cc1:TabPanel ID="TabPanel2" runat="server" HeaderText="Labour">
+                        <ContentTemplate>
+                            <table align="left" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td align="left" valign="middle">
+                                        <asp:GridView ID="GridView2" runat="server" AllowPaging="True" 
+                                            AutoGenerateColumns="False" CssClass="yui-datatable-theme" 
+                                            DataSourceID="LocalSqlServer" onrowcommand="GridView2_RowCommand" 
+                                            onrowupdated="GridView2_RowUpdated" ShowFooter="True" Width="100%">
+                                            <Columns>
+                                                <asp:TemplateField HeaderText="SN" SortExpression="Id">
+                                                    <ItemTemplate>
+                                                        <%# Container.DataItemIndex+1 %>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" />
+                                                </asp:TemplateField>                                               
+                                                
+                                                <asp:TemplateField>
+                
+                                                    <ItemTemplate>
+                                                        <asp:HyperLink ID="HyperLink1" runat="server" Text="Select" />
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Center" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="CK">
+                                                    <ItemTemplate>
+                                                        <asp:CheckBox ID="CheckBox1" runat="server" AutoPostBack="true" 
+                                                            OnCheckedChanged="CheckBox1_CheckedChanged" />
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Center" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Id" SortExpression="Id" Visible="False">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblId" runat="server" Text='<%#Eval("Id") %>'> </asp:Label>
+                                                    </ItemTemplate>
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Description" SortExpression="Description">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblDesc" runat="server" Text='<%#Eval("Description") %>'>
+                                                        </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Left" Width="25%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Symbol" SortExpression="Symbol">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblSymbol" runat="server" Text='<%#Eval("Symbol") %>'>
+                                                        </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Center" Width="5%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Total Budget" SortExpression="TotalBudget">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblTotalBudget" runat="server"> </asp:Label>
+                                                        <asp:TextBox ID="TxtAmount" Width="129" runat="server" Visible="false">
+                                                        </asp:TextBox>
+                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                                                        ControlToValidate="TxtAmount" ErrorMessage="*" ValidationExpression="^\d{1,15}(\.\d{0,3})?$" 
+                                                        ValidationGroup="A"></asp:RegularExpressionValidator>
+                                                    </ItemTemplate>
+                                                    <FooterTemplate>
+                                                        <asp:Button ID="BtnInsert" runat="server" CommandName="Insert" ValidationGroup="A" 
+                                                            CssClass="redbox" Text="Insert"  />                                                            
+                                                    </FooterTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="PO" SortExpression="PO">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblPO" runat="server"> </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Cash" SortExpression="Cash">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblCash" runat="server"> </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Tax" SortExpression="Tax">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblTax" runat="server"> </asp:Label>
+                                                    </ItemTemplate>
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                                <asp:TemplateField HeaderText="Bal Budget" SortExpression="Amount">
+                                                    <ItemTemplate>
+                                                        <asp:Label ID="lblAmount" runat="server"> </asp:Label>                                                       
+                                                    </ItemTemplate>
+                                                    
+                                                    <ItemStyle HorizontalAlign="Right" Width="12%" />
+                                                </asp:TemplateField>
+                                            </Columns>
+                                        </asp:GridView>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+                                        <asp:SqlDataSource ID="LocalSqlServer" runat="server" 
+                                            ConnectionString="<%$ connectionStrings:LocalSqlServer %>" 
+                                            SelectCommand="SELECT Id, Category, Description, Symbol, Abbrivation FROM AccHead WHERE (Category = 'Labour')">
+                                        </asp:SqlDataSource>
+                                        <asp:Label ID="lblMessage" runat="server" Font-Bold="True" ForeColor="#3333FF" 
+                                            Text="Label"></asp:Label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ContentTemplate>
+                    </cc1:TabPanel>
+                </cc1:TabContainer>
+                        </td>
+        </tr>
+        <tr>
+            <td align="center" valign="middle" height="22">
+            
+                <asp:Button ID="btnCancel" runat="server" onclick="btnCancel_Click" 
+                    Text="Cancel" CssClass="redbox" />
+                        </td>
+        </tr>
+        </table>
+</asp:Content>
+<asp:Content ID="Content8" ContentPlaceHolderID="ContentPlaceHolder4" Runat="Server">
+</asp:Content>
+

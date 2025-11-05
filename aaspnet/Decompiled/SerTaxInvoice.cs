@@ -1,0 +1,2011 @@
+using System;
+using System.CodeDom.Compiler;
+using System.Collections;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Data;
+using System.Diagnostics;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Xml;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
+[Serializable]
+[XmlSchemaProvider("GetTypedDataSetSchema")]
+[XmlRoot("SerTaxInvoice")]
+[HelpKeyword("vs.data.DataSet")]
+[ToolboxItem(true)]
+[GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+[DesignerCategory("code")]
+public class SerTaxInvoice : DataSet
+{
+	public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+
+	[Serializable]
+	[XmlSchemaProvider("GetTypedTableSchema")]
+	[GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+	public class DataTable1DataTable : TypedTableBase<DataTable1Row>
+	{
+		private DataColumn columnId;
+
+		private DataColumn columnSysDate;
+
+		private DataColumn columnInvoiceNo;
+
+		private DataColumn columnPONo;
+
+		private DataColumn columnWONo;
+
+		private DataColumn columnDateOfIssueInvoice;
+
+		private DataColumn columnCompId;
+
+		private DataColumn columnTimeOfIssueInvoice;
+
+		private DataColumn columnDutyRate;
+
+		private DataColumn columnCustomerCode;
+
+		private DataColumn columnCustomerCategory;
+
+		private DataColumn columnBuyer_name;
+
+		private DataColumn columnBuyer_cotper;
+
+		private DataColumn columnBuyer_ph;
+
+		private DataColumn columnBuyer_email;
+
+		private DataColumn columnBuyer_ecc;
+
+		private DataColumn columnBuyer_tin;
+
+		private DataColumn columnBuyer_mob;
+
+		private DataColumn columnBuyer_fax;
+
+		private DataColumn columnBuyer_vat;
+
+		private DataColumn columnCong_name;
+
+		private DataColumn columnCong_cotper;
+
+		private DataColumn columnCong_ph;
+
+		private DataColumn columnCong_email_;
+
+		private DataColumn columnCong_ecc;
+
+		private DataColumn columnCong_tin;
+
+		private DataColumn columnCong_mob;
+
+		private DataColumn columnCong_fax;
+
+		private DataColumn columnCong_vat;
+
+		private DataColumn columnAddType;
+
+		private DataColumn columnAddAmt;
+
+		private DataColumn columnDeductionType;
+
+		private DataColumn columnDeduction;
+
+		private DataColumn columnServiceTax;
+
+		private DataColumn columnTaxableServices;
+
+		private DataColumn columnPODate;
+
+		private DataColumn columnPOId;
+
+		[DebuggerNonUserCode]
+		public DataColumn IdColumn => columnId;
+
+		[DebuggerNonUserCode]
+		public DataColumn SysDateColumn => columnSysDate;
+
+		[DebuggerNonUserCode]
+		public DataColumn InvoiceNoColumn => columnInvoiceNo;
+
+		[DebuggerNonUserCode]
+		public DataColumn PONoColumn => columnPONo;
+
+		[DebuggerNonUserCode]
+		public DataColumn WONoColumn => columnWONo;
+
+		[DebuggerNonUserCode]
+		public DataColumn DateOfIssueInvoiceColumn => columnDateOfIssueInvoice;
+
+		[DebuggerNonUserCode]
+		public DataColumn CompIdColumn => columnCompId;
+
+		[DebuggerNonUserCode]
+		public DataColumn TimeOfIssueInvoiceColumn => columnTimeOfIssueInvoice;
+
+		[DebuggerNonUserCode]
+		public DataColumn DutyRateColumn => columnDutyRate;
+
+		[DebuggerNonUserCode]
+		public DataColumn CustomerCodeColumn => columnCustomerCode;
+
+		[DebuggerNonUserCode]
+		public DataColumn CustomerCategoryColumn => columnCustomerCategory;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_nameColumn => columnBuyer_name;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_cotperColumn => columnBuyer_cotper;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_phColumn => columnBuyer_ph;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_emailColumn => columnBuyer_email;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_eccColumn => columnBuyer_ecc;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_tinColumn => columnBuyer_tin;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_mobColumn => columnBuyer_mob;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_faxColumn => columnBuyer_fax;
+
+		[DebuggerNonUserCode]
+		public DataColumn Buyer_vatColumn => columnBuyer_vat;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_nameColumn => columnCong_name;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_cotperColumn => columnCong_cotper;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_phColumn => columnCong_ph;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_email_Column => columnCong_email_;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_eccColumn => columnCong_ecc;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_tinColumn => columnCong_tin;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_mobColumn => columnCong_mob;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_faxColumn => columnCong_fax;
+
+		[DebuggerNonUserCode]
+		public DataColumn Cong_vatColumn => columnCong_vat;
+
+		[DebuggerNonUserCode]
+		public DataColumn AddTypeColumn => columnAddType;
+
+		[DebuggerNonUserCode]
+		public DataColumn AddAmtColumn => columnAddAmt;
+
+		[DebuggerNonUserCode]
+		public DataColumn DeductionTypeColumn => columnDeductionType;
+
+		[DebuggerNonUserCode]
+		public DataColumn DeductionColumn => columnDeduction;
+
+		[DebuggerNonUserCode]
+		public DataColumn ServiceTaxColumn => columnServiceTax;
+
+		[DebuggerNonUserCode]
+		public DataColumn TaxableServicesColumn => columnTaxableServices;
+
+		[DebuggerNonUserCode]
+		public DataColumn PODateColumn => columnPODate;
+
+		[DebuggerNonUserCode]
+		public DataColumn POIdColumn => columnPOId;
+
+		[DebuggerNonUserCode]
+		[Browsable(false)]
+		public int Count => base.Rows.Count;
+
+		[DebuggerNonUserCode]
+		public DataTable1Row this[int index] => (DataTable1Row)base.Rows[index];
+
+		public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+
+		public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+
+		public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+
+		public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+
+		[DebuggerNonUserCode]
+		public DataTable1DataTable()
+		{
+			base.TableName = "DataTable1";
+			BeginInit();
+			InitClass();
+			EndInit();
+		}
+
+		[DebuggerNonUserCode]
+		internal DataTable1DataTable(DataTable table)
+		{
+			base.TableName = table.TableName;
+			if (table.CaseSensitive != table.DataSet.CaseSensitive)
+			{
+				base.CaseSensitive = table.CaseSensitive;
+			}
+			if (table.Locale.ToString() != table.DataSet.Locale.ToString())
+			{
+				base.Locale = table.Locale;
+			}
+			if (table.Namespace != table.DataSet.Namespace)
+			{
+				base.Namespace = table.Namespace;
+			}
+			base.Prefix = table.Prefix;
+			base.MinimumCapacity = table.MinimumCapacity;
+		}
+
+		[DebuggerNonUserCode]
+		protected DataTable1DataTable(SerializationInfo info, StreamingContext context)
+			: base(info, context)
+		{
+			InitVars();
+		}
+
+		[DebuggerNonUserCode]
+		public void AddDataTable1Row(DataTable1Row row)
+		{
+			base.Rows.Add(row);
+		}
+
+		[DebuggerNonUserCode]
+		public DataTable1Row AddDataTable1Row(int Id, string SysDate, string InvoiceNo, string PONo, string WONo, string DateOfIssueInvoice, int CompId, string TimeOfIssueInvoice, string DutyRate, string CustomerCode, string CustomerCategory, string Buyer_name, string Buyer_cotper, string Buyer_ph, string Buyer_email, string Buyer_ecc, string Buyer_tin, string Buyer_mob, string Buyer_fax, string Buyer_vat, string Cong_name, string Cong_cotper, string Cong_ph, string Cong_email_, string Cong_ecc, string Cong_tin, string Cong_mob, string Cong_fax, string Cong_vat, int AddType, double AddAmt, int DeductionType, double Deduction, int ServiceTax, string TaxableServices, string PODate, int POId)
+		{
+			DataTable1Row dataTable1Row = (DataTable1Row)NewRow();
+			object[] itemArray = new object[37]
+			{
+				Id, SysDate, InvoiceNo, PONo, WONo, DateOfIssueInvoice, CompId, TimeOfIssueInvoice, DutyRate, CustomerCode,
+				CustomerCategory, Buyer_name, Buyer_cotper, Buyer_ph, Buyer_email, Buyer_ecc, Buyer_tin, Buyer_mob, Buyer_fax, Buyer_vat,
+				Cong_name, Cong_cotper, Cong_ph, Cong_email_, Cong_ecc, Cong_tin, Cong_mob, Cong_fax, Cong_vat, AddType,
+				AddAmt, DeductionType, Deduction, ServiceTax, TaxableServices, PODate, POId
+			};
+			dataTable1Row.ItemArray = itemArray;
+			base.Rows.Add(dataTable1Row);
+			return dataTable1Row;
+		}
+
+		[DebuggerNonUserCode]
+		public override DataTable Clone()
+		{
+			DataTable1DataTable dataTable1DataTable = (DataTable1DataTable)base.Clone();
+			dataTable1DataTable.InitVars();
+			return dataTable1DataTable;
+		}
+
+		[DebuggerNonUserCode]
+		protected override DataTable CreateInstance()
+		{
+			return new DataTable1DataTable();
+		}
+
+		[DebuggerNonUserCode]
+		internal void InitVars()
+		{
+			columnId = base.Columns["Id"];
+			columnSysDate = base.Columns["SysDate"];
+			columnInvoiceNo = base.Columns["InvoiceNo"];
+			columnPONo = base.Columns["PONo"];
+			columnWONo = base.Columns["WONo"];
+			columnDateOfIssueInvoice = base.Columns["DateOfIssueInvoice"];
+			columnCompId = base.Columns["CompId"];
+			columnTimeOfIssueInvoice = base.Columns["TimeOfIssueInvoice"];
+			columnDutyRate = base.Columns["DutyRate"];
+			columnCustomerCode = base.Columns["CustomerCode"];
+			columnCustomerCategory = base.Columns["CustomerCategory"];
+			columnBuyer_name = base.Columns["Buyer_name"];
+			columnBuyer_cotper = base.Columns["Buyer_cotper"];
+			columnBuyer_ph = base.Columns["Buyer_ph"];
+			columnBuyer_email = base.Columns["Buyer_email"];
+			columnBuyer_ecc = base.Columns["Buyer_ecc"];
+			columnBuyer_tin = base.Columns["Buyer_tin"];
+			columnBuyer_mob = base.Columns["Buyer_mob"];
+			columnBuyer_fax = base.Columns["Buyer_fax"];
+			columnBuyer_vat = base.Columns["Buyer_vat"];
+			columnCong_name = base.Columns["Cong_name"];
+			columnCong_cotper = base.Columns["Cong_cotper"];
+			columnCong_ph = base.Columns["Cong_ph"];
+			columnCong_email_ = base.Columns["Cong_email "];
+			columnCong_ecc = base.Columns["Cong_ecc"];
+			columnCong_tin = base.Columns["Cong_tin"];
+			columnCong_mob = base.Columns["Cong_mob"];
+			columnCong_fax = base.Columns["Cong_fax"];
+			columnCong_vat = base.Columns["Cong_vat"];
+			columnAddType = base.Columns["AddType"];
+			columnAddAmt = base.Columns["AddAmt"];
+			columnDeductionType = base.Columns["DeductionType"];
+			columnDeduction = base.Columns["Deduction"];
+			columnServiceTax = base.Columns["ServiceTax"];
+			columnTaxableServices = base.Columns["TaxableServices"];
+			columnPODate = base.Columns["PODate"];
+			columnPOId = base.Columns["POId"];
+		}
+
+		[DebuggerNonUserCode]
+		private void InitClass()
+		{
+			columnId = new DataColumn("Id", typeof(int), null, MappingType.Element);
+			base.Columns.Add(columnId);
+			columnSysDate = new DataColumn("SysDate", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnSysDate);
+			columnInvoiceNo = new DataColumn("InvoiceNo", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnInvoiceNo);
+			columnPONo = new DataColumn("PONo", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnPONo);
+			columnWONo = new DataColumn("WONo", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnWONo);
+			columnDateOfIssueInvoice = new DataColumn("DateOfIssueInvoice", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnDateOfIssueInvoice);
+			columnCompId = new DataColumn("CompId", typeof(int), null, MappingType.Element);
+			base.Columns.Add(columnCompId);
+			columnTimeOfIssueInvoice = new DataColumn("TimeOfIssueInvoice", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnTimeOfIssueInvoice);
+			columnDutyRate = new DataColumn("DutyRate", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnDutyRate);
+			columnCustomerCode = new DataColumn("CustomerCode", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCustomerCode);
+			columnCustomerCategory = new DataColumn("CustomerCategory", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCustomerCategory);
+			columnBuyer_name = new DataColumn("Buyer_name", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_name);
+			columnBuyer_cotper = new DataColumn("Buyer_cotper", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_cotper);
+			columnBuyer_ph = new DataColumn("Buyer_ph", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_ph);
+			columnBuyer_email = new DataColumn("Buyer_email", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_email);
+			columnBuyer_ecc = new DataColumn("Buyer_ecc", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_ecc);
+			columnBuyer_tin = new DataColumn("Buyer_tin", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_tin);
+			columnBuyer_mob = new DataColumn("Buyer_mob", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_mob);
+			columnBuyer_fax = new DataColumn("Buyer_fax", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_fax);
+			columnBuyer_vat = new DataColumn("Buyer_vat", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnBuyer_vat);
+			columnCong_name = new DataColumn("Cong_name", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_name);
+			columnCong_cotper = new DataColumn("Cong_cotper", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_cotper);
+			columnCong_ph = new DataColumn("Cong_ph", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_ph);
+			columnCong_email_ = new DataColumn("Cong_email ", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_email_);
+			columnCong_ecc = new DataColumn("Cong_ecc", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_ecc);
+			columnCong_tin = new DataColumn("Cong_tin", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_tin);
+			columnCong_mob = new DataColumn("Cong_mob", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_mob);
+			columnCong_fax = new DataColumn("Cong_fax", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_fax);
+			columnCong_vat = new DataColumn("Cong_vat", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnCong_vat);
+			columnAddType = new DataColumn("AddType", typeof(int), null, MappingType.Element);
+			base.Columns.Add(columnAddType);
+			columnAddAmt = new DataColumn("AddAmt", typeof(double), null, MappingType.Element);
+			base.Columns.Add(columnAddAmt);
+			columnDeductionType = new DataColumn("DeductionType", typeof(int), null, MappingType.Element);
+			base.Columns.Add(columnDeductionType);
+			columnDeduction = new DataColumn("Deduction", typeof(double), null, MappingType.Element);
+			base.Columns.Add(columnDeduction);
+			columnServiceTax = new DataColumn("ServiceTax", typeof(int), null, MappingType.Element);
+			base.Columns.Add(columnServiceTax);
+			columnTaxableServices = new DataColumn("TaxableServices", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnTaxableServices);
+			columnPODate = new DataColumn("PODate", typeof(string), null, MappingType.Element);
+			base.Columns.Add(columnPODate);
+			columnPOId = new DataColumn("POId", typeof(int), null, MappingType.Element);
+			base.Columns.Add(columnPOId);
+		}
+
+		[DebuggerNonUserCode]
+		public DataTable1Row NewDataTable1Row()
+		{
+			return (DataTable1Row)NewRow();
+		}
+
+		[DebuggerNonUserCode]
+		protected override DataRow NewRowFromBuilder(DataRowBuilder builder)
+		{
+			return new DataTable1Row(builder);
+		}
+
+		[DebuggerNonUserCode]
+		protected override Type GetRowType()
+		{
+			return typeof(DataTable1Row);
+		}
+
+		[DebuggerNonUserCode]
+		protected override void OnRowChanged(DataRowChangeEventArgs e)
+		{
+			base.OnRowChanged(e);
+			if (this.DataTable1RowChanged != null)
+			{
+				this.DataTable1RowChanged(this, new DataTable1RowChangeEvent((DataTable1Row)e.Row, e.Action));
+			}
+		}
+
+		[DebuggerNonUserCode]
+		protected override void OnRowChanging(DataRowChangeEventArgs e)
+		{
+			base.OnRowChanging(e);
+			if (this.DataTable1RowChanging != null)
+			{
+				this.DataTable1RowChanging(this, new DataTable1RowChangeEvent((DataTable1Row)e.Row, e.Action));
+			}
+		}
+
+		[DebuggerNonUserCode]
+		protected override void OnRowDeleted(DataRowChangeEventArgs e)
+		{
+			base.OnRowDeleted(e);
+			if (this.DataTable1RowDeleted != null)
+			{
+				this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent((DataTable1Row)e.Row, e.Action));
+			}
+		}
+
+		[DebuggerNonUserCode]
+		protected override void OnRowDeleting(DataRowChangeEventArgs e)
+		{
+			base.OnRowDeleting(e);
+			if (this.DataTable1RowDeleting != null)
+			{
+				this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent((DataTable1Row)e.Row, e.Action));
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public void RemoveDataTable1Row(DataTable1Row row)
+		{
+			base.Rows.Remove(row);
+		}
+
+		[DebuggerNonUserCode]
+		public static XmlSchemaComplexType GetTypedTableSchema(XmlSchemaSet xs)
+		{
+			XmlSchemaComplexType xmlSchemaComplexType = new XmlSchemaComplexType();
+			XmlSchemaSequence xmlSchemaSequence = new XmlSchemaSequence();
+			SerTaxInvoice serTaxInvoice = new SerTaxInvoice();
+			XmlSchemaAny xmlSchemaAny = new XmlSchemaAny();
+			xmlSchemaAny.Namespace = "http://www.w3.org/2001/XMLSchema";
+			xmlSchemaAny.MinOccurs = 0m;
+			xmlSchemaAny.MaxOccurs = decimal.MaxValue;
+			xmlSchemaAny.ProcessContents = XmlSchemaContentProcessing.Lax;
+			xmlSchemaSequence.Items.Add(xmlSchemaAny);
+			XmlSchemaAny xmlSchemaAny2 = new XmlSchemaAny();
+			xmlSchemaAny2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+			xmlSchemaAny2.MinOccurs = 1m;
+			xmlSchemaAny2.ProcessContents = XmlSchemaContentProcessing.Lax;
+			xmlSchemaSequence.Items.Add(xmlSchemaAny2);
+			XmlSchemaAttribute xmlSchemaAttribute = new XmlSchemaAttribute();
+			xmlSchemaAttribute.Name = "namespace";
+			xmlSchemaAttribute.FixedValue = serTaxInvoice.Namespace;
+			xmlSchemaComplexType.Attributes.Add(xmlSchemaAttribute);
+			XmlSchemaAttribute xmlSchemaAttribute2 = new XmlSchemaAttribute();
+			xmlSchemaAttribute2.Name = "tableTypeName";
+			xmlSchemaAttribute2.FixedValue = "DataTable1DataTable";
+			xmlSchemaComplexType.Attributes.Add(xmlSchemaAttribute2);
+			xmlSchemaComplexType.Particle = xmlSchemaSequence;
+			XmlSchema schemaSerializable = serTaxInvoice.GetSchemaSerializable();
+			if (xs.Contains(schemaSerializable.TargetNamespace))
+			{
+				MemoryStream memoryStream = new MemoryStream();
+				MemoryStream memoryStream2 = new MemoryStream();
+				try
+				{
+					XmlSchema xmlSchema = null;
+					schemaSerializable.Write(memoryStream);
+					IEnumerator enumerator = xs.Schemas(schemaSerializable.TargetNamespace).GetEnumerator();
+					while (enumerator.MoveNext())
+					{
+						xmlSchema = (XmlSchema)enumerator.Current;
+						memoryStream2.SetLength(0L);
+						xmlSchema.Write(memoryStream2);
+						if (memoryStream.Length == memoryStream2.Length)
+						{
+							memoryStream.Position = 0L;
+							memoryStream2.Position = 0L;
+							while (memoryStream.Position != memoryStream.Length && memoryStream.ReadByte() == memoryStream2.ReadByte())
+							{
+							}
+							if (memoryStream.Position == memoryStream.Length)
+							{
+								return xmlSchemaComplexType;
+							}
+						}
+					}
+				}
+				finally
+				{
+					memoryStream?.Close();
+					memoryStream2?.Close();
+				}
+			}
+			xs.Add(schemaSerializable);
+			return xmlSchemaComplexType;
+		}
+	}
+
+	[GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+	public class DataTable1Row : DataRow
+	{
+		private DataTable1DataTable tableDataTable1;
+
+		[DebuggerNonUserCode]
+		public int Id
+		{
+			get
+			{
+				try
+				{
+					return (int)base[tableDataTable1.IdColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Id' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.IdColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string SysDate
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.SysDateColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'SysDate' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.SysDateColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string InvoiceNo
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.InvoiceNoColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'InvoiceNo' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.InvoiceNoColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string PONo
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.PONoColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'PONo' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.PONoColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string WONo
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.WONoColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'WONo' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.WONoColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string DateOfIssueInvoice
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.DateOfIssueInvoiceColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'DateOfIssueInvoice' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.DateOfIssueInvoiceColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public int CompId
+		{
+			get
+			{
+				try
+				{
+					return (int)base[tableDataTable1.CompIdColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'CompId' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.CompIdColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string TimeOfIssueInvoice
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.TimeOfIssueInvoiceColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'TimeOfIssueInvoice' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.TimeOfIssueInvoiceColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string DutyRate
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.DutyRateColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'DutyRate' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.DutyRateColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string CustomerCode
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.CustomerCodeColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'CustomerCode' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.CustomerCodeColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string CustomerCategory
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.CustomerCategoryColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'CustomerCategory' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.CustomerCategoryColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_name
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_nameColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_name' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_nameColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_cotper
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_cotperColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_cotper' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_cotperColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_ph
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_phColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_ph' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_phColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_email
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_emailColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_email' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_emailColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_ecc
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_eccColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_ecc' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_eccColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_tin
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_tinColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_tin' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_tinColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_mob
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_mobColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_mob' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_mobColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_fax
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_faxColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_fax' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_faxColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Buyer_vat
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Buyer_vatColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Buyer_vat' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Buyer_vatColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_name
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_nameColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_name' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_nameColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_cotper
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_cotperColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_cotper' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_cotperColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_ph
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_phColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_ph' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_phColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_email_
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_email_Column];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_email ' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_email_Column] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_ecc
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_eccColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_ecc' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_eccColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_tin
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_tinColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_tin' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_tinColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_mob
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_mobColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_mob' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_mobColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_fax
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_faxColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_fax' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_faxColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string Cong_vat
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.Cong_vatColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Cong_vat' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.Cong_vatColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public int AddType
+		{
+			get
+			{
+				try
+				{
+					return (int)base[tableDataTable1.AddTypeColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'AddType' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.AddTypeColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public double AddAmt
+		{
+			get
+			{
+				try
+				{
+					return (double)base[tableDataTable1.AddAmtColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'AddAmt' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.AddAmtColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public int DeductionType
+		{
+			get
+			{
+				try
+				{
+					return (int)base[tableDataTable1.DeductionTypeColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'DeductionType' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.DeductionTypeColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public double Deduction
+		{
+			get
+			{
+				try
+				{
+					return (double)base[tableDataTable1.DeductionColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'Deduction' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.DeductionColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public int ServiceTax
+		{
+			get
+			{
+				try
+				{
+					return (int)base[tableDataTable1.ServiceTaxColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'ServiceTax' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.ServiceTaxColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string TaxableServices
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.TaxableServicesColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'TaxableServices' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.TaxableServicesColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public string PODate
+		{
+			get
+			{
+				try
+				{
+					return (string)base[tableDataTable1.PODateColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'PODate' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.PODateColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		public int POId
+		{
+			get
+			{
+				try
+				{
+					return (int)base[tableDataTable1.POIdColumn];
+				}
+				catch (InvalidCastException innerException)
+				{
+					throw new StrongTypingException("The value for column 'POId' in table 'DataTable1' is DBNull.", innerException);
+				}
+			}
+			set
+			{
+				base[tableDataTable1.POIdColumn] = value;
+			}
+		}
+
+		[DebuggerNonUserCode]
+		internal DataTable1Row(DataRowBuilder rb)
+			: base(rb)
+		{
+			tableDataTable1 = (DataTable1DataTable)base.Table;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsIdNull()
+		{
+			return IsNull(tableDataTable1.IdColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetIdNull()
+		{
+			base[tableDataTable1.IdColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsSysDateNull()
+		{
+			return IsNull(tableDataTable1.SysDateColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetSysDateNull()
+		{
+			base[tableDataTable1.SysDateColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsInvoiceNoNull()
+		{
+			return IsNull(tableDataTable1.InvoiceNoColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetInvoiceNoNull()
+		{
+			base[tableDataTable1.InvoiceNoColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsPONoNull()
+		{
+			return IsNull(tableDataTable1.PONoColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetPONoNull()
+		{
+			base[tableDataTable1.PONoColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsWONoNull()
+		{
+			return IsNull(tableDataTable1.WONoColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetWONoNull()
+		{
+			base[tableDataTable1.WONoColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsDateOfIssueInvoiceNull()
+		{
+			return IsNull(tableDataTable1.DateOfIssueInvoiceColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetDateOfIssueInvoiceNull()
+		{
+			base[tableDataTable1.DateOfIssueInvoiceColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCompIdNull()
+		{
+			return IsNull(tableDataTable1.CompIdColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCompIdNull()
+		{
+			base[tableDataTable1.CompIdColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsTimeOfIssueInvoiceNull()
+		{
+			return IsNull(tableDataTable1.TimeOfIssueInvoiceColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetTimeOfIssueInvoiceNull()
+		{
+			base[tableDataTable1.TimeOfIssueInvoiceColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsDutyRateNull()
+		{
+			return IsNull(tableDataTable1.DutyRateColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetDutyRateNull()
+		{
+			base[tableDataTable1.DutyRateColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCustomerCodeNull()
+		{
+			return IsNull(tableDataTable1.CustomerCodeColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCustomerCodeNull()
+		{
+			base[tableDataTable1.CustomerCodeColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCustomerCategoryNull()
+		{
+			return IsNull(tableDataTable1.CustomerCategoryColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCustomerCategoryNull()
+		{
+			base[tableDataTable1.CustomerCategoryColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_nameNull()
+		{
+			return IsNull(tableDataTable1.Buyer_nameColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_nameNull()
+		{
+			base[tableDataTable1.Buyer_nameColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_cotperNull()
+		{
+			return IsNull(tableDataTable1.Buyer_cotperColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_cotperNull()
+		{
+			base[tableDataTable1.Buyer_cotperColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_phNull()
+		{
+			return IsNull(tableDataTable1.Buyer_phColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_phNull()
+		{
+			base[tableDataTable1.Buyer_phColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_emailNull()
+		{
+			return IsNull(tableDataTable1.Buyer_emailColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_emailNull()
+		{
+			base[tableDataTable1.Buyer_emailColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_eccNull()
+		{
+			return IsNull(tableDataTable1.Buyer_eccColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_eccNull()
+		{
+			base[tableDataTable1.Buyer_eccColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_tinNull()
+		{
+			return IsNull(tableDataTable1.Buyer_tinColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_tinNull()
+		{
+			base[tableDataTable1.Buyer_tinColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_mobNull()
+		{
+			return IsNull(tableDataTable1.Buyer_mobColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_mobNull()
+		{
+			base[tableDataTable1.Buyer_mobColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_faxNull()
+		{
+			return IsNull(tableDataTable1.Buyer_faxColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_faxNull()
+		{
+			base[tableDataTable1.Buyer_faxColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsBuyer_vatNull()
+		{
+			return IsNull(tableDataTable1.Buyer_vatColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetBuyer_vatNull()
+		{
+			base[tableDataTable1.Buyer_vatColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_nameNull()
+		{
+			return IsNull(tableDataTable1.Cong_nameColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_nameNull()
+		{
+			base[tableDataTable1.Cong_nameColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_cotperNull()
+		{
+			return IsNull(tableDataTable1.Cong_cotperColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_cotperNull()
+		{
+			base[tableDataTable1.Cong_cotperColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_phNull()
+		{
+			return IsNull(tableDataTable1.Cong_phColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_phNull()
+		{
+			base[tableDataTable1.Cong_phColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_email_Null()
+		{
+			return IsNull(tableDataTable1.Cong_email_Column);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_email_Null()
+		{
+			base[tableDataTable1.Cong_email_Column] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_eccNull()
+		{
+			return IsNull(tableDataTable1.Cong_eccColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_eccNull()
+		{
+			base[tableDataTable1.Cong_eccColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_tinNull()
+		{
+			return IsNull(tableDataTable1.Cong_tinColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_tinNull()
+		{
+			base[tableDataTable1.Cong_tinColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_mobNull()
+		{
+			return IsNull(tableDataTable1.Cong_mobColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_mobNull()
+		{
+			base[tableDataTable1.Cong_mobColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_faxNull()
+		{
+			return IsNull(tableDataTable1.Cong_faxColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_faxNull()
+		{
+			base[tableDataTable1.Cong_faxColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsCong_vatNull()
+		{
+			return IsNull(tableDataTable1.Cong_vatColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetCong_vatNull()
+		{
+			base[tableDataTable1.Cong_vatColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsAddTypeNull()
+		{
+			return IsNull(tableDataTable1.AddTypeColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetAddTypeNull()
+		{
+			base[tableDataTable1.AddTypeColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsAddAmtNull()
+		{
+			return IsNull(tableDataTable1.AddAmtColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetAddAmtNull()
+		{
+			base[tableDataTable1.AddAmtColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsDeductionTypeNull()
+		{
+			return IsNull(tableDataTable1.DeductionTypeColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetDeductionTypeNull()
+		{
+			base[tableDataTable1.DeductionTypeColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsDeductionNull()
+		{
+			return IsNull(tableDataTable1.DeductionColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetDeductionNull()
+		{
+			base[tableDataTable1.DeductionColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsServiceTaxNull()
+		{
+			return IsNull(tableDataTable1.ServiceTaxColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetServiceTaxNull()
+		{
+			base[tableDataTable1.ServiceTaxColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsTaxableServicesNull()
+		{
+			return IsNull(tableDataTable1.TaxableServicesColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetTaxableServicesNull()
+		{
+			base[tableDataTable1.TaxableServicesColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsPODateNull()
+		{
+			return IsNull(tableDataTable1.PODateColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetPODateNull()
+		{
+			base[tableDataTable1.PODateColumn] = Convert.DBNull;
+		}
+
+		[DebuggerNonUserCode]
+		public bool IsPOIdNull()
+		{
+			return IsNull(tableDataTable1.POIdColumn);
+		}
+
+		[DebuggerNonUserCode]
+		public void SetPOIdNull()
+		{
+			base[tableDataTable1.POIdColumn] = Convert.DBNull;
+		}
+	}
+
+	[GeneratedCode("System.Data.Design.TypedDataSetGenerator", "2.0.0.0")]
+	public class DataTable1RowChangeEvent : EventArgs
+	{
+		private DataTable1Row eventRow;
+
+		private DataRowAction eventAction;
+
+		[DebuggerNonUserCode]
+		public DataTable1Row Row => eventRow;
+
+		[DebuggerNonUserCode]
+		public DataRowAction Action => eventAction;
+
+		[DebuggerNonUserCode]
+		public DataTable1RowChangeEvent(DataTable1Row row, DataRowAction action)
+		{
+			eventRow = row;
+			eventAction = action;
+		}
+	}
+
+	private DataTable1DataTable tableDataTable1;
+
+	private SchemaSerializationMode _schemaSerializationMode = SchemaSerializationMode.IncludeSchema;
+
+	[DebuggerNonUserCode]
+	[Browsable(false)]
+	[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+	public DataTable1DataTable DataTable1 => tableDataTable1;
+
+	[DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
+	[Browsable(true)]
+	[DebuggerNonUserCode]
+	public override SchemaSerializationMode SchemaSerializationMode
+	{
+		get
+		{
+			return _schemaSerializationMode;
+		}
+		set
+		{
+			_schemaSerializationMode = value;
+		}
+	}
+
+	[DebuggerNonUserCode]
+	[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+	public new DataTableCollection Tables => base.Tables;
+
+	[DebuggerNonUserCode]
+	[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+	public new DataRelationCollection Relations => base.Relations;
+
+	[DebuggerNonUserCode]
+	public SerTaxInvoice()
+	{
+		BeginInit();
+		InitClass();
+		CollectionChangeEventHandler value = SchemaChanged;
+		base.Tables.CollectionChanged += value;
+		base.Relations.CollectionChanged += value;
+		EndInit();
+	}
+
+	[DebuggerNonUserCode]
+	protected SerTaxInvoice(SerializationInfo info, StreamingContext context)
+		: base(info, context, ConstructSchema: false)
+	{
+		if (IsBinarySerialized(info, context))
+		{
+			InitVars(initTable: false);
+			CollectionChangeEventHandler value = SchemaChanged;
+			Tables.CollectionChanged += value;
+			Relations.CollectionChanged += value;
+			return;
+		}
+		string s = (string)info.GetValue("XmlSchema", typeof(string));
+		if (DetermineSchemaSerializationMode(info, context) == SchemaSerializationMode.IncludeSchema)
+		{
+			DataSet dataSet = new DataSet();
+			dataSet.ReadXmlSchema(new XmlTextReader(new StringReader(s)));
+			if (dataSet.Tables["DataTable1"] != null)
+			{
+				base.Tables.Add(new DataTable1DataTable(dataSet.Tables["DataTable1"]));
+			}
+			base.DataSetName = dataSet.DataSetName;
+			base.Prefix = dataSet.Prefix;
+			base.Namespace = dataSet.Namespace;
+			base.Locale = dataSet.Locale;
+			base.CaseSensitive = dataSet.CaseSensitive;
+			base.EnforceConstraints = dataSet.EnforceConstraints;
+			Merge(dataSet, preserveChanges: false, MissingSchemaAction.Add);
+			InitVars();
+		}
+		else
+		{
+			ReadXmlSchema(new XmlTextReader(new StringReader(s)));
+		}
+		GetSerializationData(info, context);
+		CollectionChangeEventHandler value2 = SchemaChanged;
+		base.Tables.CollectionChanged += value2;
+		Relations.CollectionChanged += value2;
+	}
+
+	[DebuggerNonUserCode]
+	protected override void InitializeDerivedDataSet()
+	{
+		BeginInit();
+		InitClass();
+		EndInit();
+	}
+
+	[DebuggerNonUserCode]
+	public override DataSet Clone()
+	{
+		SerTaxInvoice serTaxInvoice = (SerTaxInvoice)base.Clone();
+		serTaxInvoice.InitVars();
+		serTaxInvoice.SchemaSerializationMode = SchemaSerializationMode;
+		return serTaxInvoice;
+	}
+
+	[DebuggerNonUserCode]
+	protected override bool ShouldSerializeTables()
+	{
+		return false;
+	}
+
+	[DebuggerNonUserCode]
+	protected override bool ShouldSerializeRelations()
+	{
+		return false;
+	}
+
+	[DebuggerNonUserCode]
+	protected override void ReadXmlSerializable(XmlReader reader)
+	{
+		if (DetermineSchemaSerializationMode(reader) == SchemaSerializationMode.IncludeSchema)
+		{
+			Reset();
+			DataSet dataSet = new DataSet();
+			dataSet.ReadXml(reader);
+			if (dataSet.Tables["DataTable1"] != null)
+			{
+				base.Tables.Add(new DataTable1DataTable(dataSet.Tables["DataTable1"]));
+			}
+			base.DataSetName = dataSet.DataSetName;
+			base.Prefix = dataSet.Prefix;
+			base.Namespace = dataSet.Namespace;
+			base.Locale = dataSet.Locale;
+			base.CaseSensitive = dataSet.CaseSensitive;
+			base.EnforceConstraints = dataSet.EnforceConstraints;
+			Merge(dataSet, preserveChanges: false, MissingSchemaAction.Add);
+			InitVars();
+		}
+		else
+		{
+			ReadXml(reader);
+			InitVars();
+		}
+	}
+
+	[DebuggerNonUserCode]
+	protected override XmlSchema GetSchemaSerializable()
+	{
+		MemoryStream memoryStream = new MemoryStream();
+		WriteXmlSchema(new XmlTextWriter(memoryStream, null));
+		memoryStream.Position = 0L;
+		return XmlSchema.Read(new XmlTextReader(memoryStream), null);
+	}
+
+	[DebuggerNonUserCode]
+	internal void InitVars()
+	{
+		InitVars(initTable: true);
+	}
+
+	[DebuggerNonUserCode]
+	internal void InitVars(bool initTable)
+	{
+		tableDataTable1 = (DataTable1DataTable)base.Tables["DataTable1"];
+		if (initTable && tableDataTable1 != null)
+		{
+			tableDataTable1.InitVars();
+		}
+	}
+
+	[DebuggerNonUserCode]
+	private void InitClass()
+	{
+		base.DataSetName = "SerTaxInvoice";
+		base.Prefix = "";
+		base.Namespace = "http://tempuri.org/SerTaxInvoice.xsd";
+		base.EnforceConstraints = true;
+		SchemaSerializationMode = SchemaSerializationMode.IncludeSchema;
+		tableDataTable1 = new DataTable1DataTable();
+		base.Tables.Add(tableDataTable1);
+	}
+
+	[DebuggerNonUserCode]
+	private bool ShouldSerializeDataTable1()
+	{
+		return false;
+	}
+
+	[DebuggerNonUserCode]
+	private void SchemaChanged(object sender, CollectionChangeEventArgs e)
+	{
+		if (e.Action == CollectionChangeAction.Remove)
+		{
+			InitVars();
+		}
+	}
+
+	[DebuggerNonUserCode]
+	public static XmlSchemaComplexType GetTypedDataSetSchema(XmlSchemaSet xs)
+	{
+		SerTaxInvoice serTaxInvoice = new SerTaxInvoice();
+		XmlSchemaComplexType xmlSchemaComplexType = new XmlSchemaComplexType();
+		XmlSchemaSequence xmlSchemaSequence = new XmlSchemaSequence();
+		XmlSchemaAny xmlSchemaAny = new XmlSchemaAny();
+		xmlSchemaAny.Namespace = serTaxInvoice.Namespace;
+		xmlSchemaSequence.Items.Add(xmlSchemaAny);
+		xmlSchemaComplexType.Particle = xmlSchemaSequence;
+		XmlSchema schemaSerializable = serTaxInvoice.GetSchemaSerializable();
+		if (xs.Contains(schemaSerializable.TargetNamespace))
+		{
+			MemoryStream memoryStream = new MemoryStream();
+			MemoryStream memoryStream2 = new MemoryStream();
+			try
+			{
+				XmlSchema xmlSchema = null;
+				schemaSerializable.Write(memoryStream);
+				IEnumerator enumerator = xs.Schemas(schemaSerializable.TargetNamespace).GetEnumerator();
+				while (enumerator.MoveNext())
+				{
+					xmlSchema = (XmlSchema)enumerator.Current;
+					memoryStream2.SetLength(0L);
+					xmlSchema.Write(memoryStream2);
+					if (memoryStream.Length == memoryStream2.Length)
+					{
+						memoryStream.Position = 0L;
+						memoryStream2.Position = 0L;
+						while (memoryStream.Position != memoryStream.Length && memoryStream.ReadByte() == memoryStream2.ReadByte())
+						{
+						}
+						if (memoryStream.Position == memoryStream.Length)
+						{
+							return xmlSchemaComplexType;
+						}
+					}
+				}
+			}
+			finally
+			{
+				memoryStream?.Close();
+				memoryStream2?.Close();
+			}
+		}
+		xs.Add(schemaSerializable);
+		return xmlSchemaComplexType;
+	}
+}

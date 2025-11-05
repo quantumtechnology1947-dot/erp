@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1355</Id>
+    <ItemCode>10</ItemCode>
+    <Description>Rear Frame Structure Assembly</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0084</WONo>
+    <DANo>0350</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1356</Id>
+    <ItemCode>20</ItemCode>
+    <Description>Cover Control Assembly</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0084</WONo>
+    <DANo>0350</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1357</Id>
+    <ItemCode>30</ItemCode>
+    <Description>Structure Frame and Floor Assembly</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0084</WONo>
+    <DANo>0350</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

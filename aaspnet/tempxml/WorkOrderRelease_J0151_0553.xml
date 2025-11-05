@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2977</Id>
+    <ItemCode>-</ItemCode>
+    <Description>New Container Body Side LH 5JL809605</Description>
+    <Qty>20</Qty>
+    <ReleasedQty>20</ReleasedQty>
+    <WONo>J0151</WONo>
+    <WRNo>0553</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2978</Id>
+    <ItemCode>-</ItemCode>
+    <Description>New Container Body Side RH 5JL809606</Description>
+    <Qty>20</Qty>
+    <ReleasedQty>20</ReleasedQty>
+    <WONo>J0151</WONo>
+    <WRNo>0553</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2979</Id>
+    <ItemCode>-</ItemCode>
+    <Description>New Cont Tail Gate Outer lower 
+5JL827106</Description>
+    <Qty>40</Qty>
+    <ReleasedQty>40</ReleasedQty>
+    <WONo>J0151</WONo>
+    <WRNo>0553</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2980</Id>
+    <ItemCode>-</ItemCode>
+    <Description>New Cont Tail Gate Outer upper 5JN827105</Description>
+    <Qty>55</Qty>
+    <ReleasedQty>55</ReleasedQty>
+    <WONo>J0151</WONo>
+    <WRNo>0553</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2981</Id>
+    <ItemCode>-</ItemCode>
+    <Description>New Cont Tail Gate Outer upper 
+5JL827105</Description>
+    <Qty>5</Qty>
+    <ReleasedQty>5</ReleasedQty>
+    <WONo>J0151</WONo>
+    <WRNo>0553</WRNo>
+  </Table1>
+</NewDataSet>

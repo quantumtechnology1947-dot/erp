@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2675</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Posts 2000mm</Description>
+    <Qty>273</Qty>
+    <ReleasedQty>273</ReleasedQty>
+    <WONo>J0123</WONo>
+    <WRNo>0475</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2676</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Posts 800mm</Description>
+    <Qty>36</Qty>
+    <ReleasedQty>36</ReleasedQty>
+    <WONo>J0123</WONo>
+    <WRNo>0475</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2677</Id>
+    <ItemCode>3</ItemCode>
+    <Description>Fence 2000mm</Description>
+    <Qty>243</Qty>
+    <ReleasedQty>243</ReleasedQty>
+    <WONo>J0123</WONo>
+    <WRNo>0475</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2678</Id>
+    <ItemCode>4</ItemCode>
+    <Description>Fence 800mm</Description>
+    <Qty>34</Qty>
+    <ReleasedQty>34</ReleasedQty>
+    <WONo>J0123</WONo>
+    <WRNo>0475</WRNo>
+  </Table1>
+</NewDataSet>

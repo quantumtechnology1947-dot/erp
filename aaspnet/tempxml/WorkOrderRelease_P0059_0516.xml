@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2768</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Break Coil Transformer</Description>
+    <Qty>10</Qty>
+    <ReleasedQty>10</ReleasedQty>
+    <WONo>P0059</WONo>
+    <WRNo>0516</WRNo>
+  </Table1>
+</NewDataSet>

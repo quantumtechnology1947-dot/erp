@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1887</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Long rail-6mtr x 16lines = 96 mtr</Description>
+    <Qty>96</Qty>
+    <ReleasedQty>96</ReleasedQty>
+    <WONo>S0099</WONo>
+    <WRNo>0368</WRNo>
+  </Table1>
+  <Table1>
+    <Id>1888</Id>
+    <ItemCode>2</ItemCode>
+    <Description>cross rail 3.6mtr x 23 nos. = 82.8mtrs</Description>
+    <Qty>82.8</Qty>
+    <ReleasedQty>82.8</ReleasedQty>
+    <WONo>S0099</WONo>
+    <WRNo>0368</WRNo>
+  </Table1>
+  <Table1>
+    <Id>1889</Id>
+    <ItemCode>3</ItemCode>
+    <Description>trolley set</Description>
+    <Qty>23</Qty>
+    <ReleasedQty>23</ReleasedQty>
+    <WONo>S0099</WONo>
+    <WRNo>0368</WRNo>
+  </Table1>
+</NewDataSet>

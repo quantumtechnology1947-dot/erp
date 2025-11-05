@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1262</Id>
+    <ItemCode>30</ItemCode>
+    <Description>BWF for Front  flr Assly-stn10 - 13F485</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0056</WONo>
+    <DANo>0315</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1263</Id>
+    <ItemCode>50</ItemCode>
+    <Description>BWF for Back Pnl. Assembly - 14F556</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0056</WONo>
+    <DANo>0315</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1264</Id>
+    <ItemCode>70</ItemCode>
+    <Description>BWF Body side otr sasly L - stn20-13F463</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0056</WONo>
+    <DANo>0315</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1265</Id>
+    <ItemCode>80</ItemCode>
+    <Description>BWF Body side otr sasly L - stn20-13F466</Description>
+    <IssuedQty>1</IssuedQty>
+    <DispatchQty>1</DispatchQty>
+    <WONo>N0056</WONo>
+    <DANo>0315</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

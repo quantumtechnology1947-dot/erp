@@ -1,0 +1,117 @@
+﻿using System;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Web.Services;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+
+public partial class Challanreport : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //if (Master != null)
+        //{
+        //    Menu menu = (Menu)Master.FindControl("Menu1");
+        //    if (menu != null)
+        //    {
+        //        menu.Visible = false;
+        //    }
+        //}
+        //Label2.Text = "abc";
+        //Label4.Visible = true;
+
+        Label1.Text = Request.QueryString["DCNo"];
+        display();
+        //display1();
+
+    }
+    protected void display()
+    {
+        String strConnString = ConfigurationManager.ConnectionStrings["LocalSqlServer"].ConnectionString;
+        String strQuery = "select distinct CustomerName,Address,GST,DCNo,DCDate,Attention,Contact,Responsible_By,Type,TQty,TAmt,Gst_per,GTotal,Remark,Transport,vehicleNo,LRNo,Acknowledgement from Challan where" + " DCNo = @DCNo";
+        SqlConnection con = new SqlConnection(strConnString);
+        SqlCommand cmd = new SqlCommand();
+        cmd.Parameters.AddWithValue("@DCNo", Label1.Text);
+        
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = strQuery;
+        cmd.Connection = con;
+        try
+        {
+            con.Open();
+            SqlDataReader sdr = cmd.ExecuteReader();
+            while (sdr.Read())
+            {
+                LabelType.Text = sdr["Type"].ToString();
+                Labelto.Text = sdr["CustomerName"].ToString();
+                Labelad.Text = sdr["Address"].ToString();
+                Labelgst.Text = sdr["GST"].ToString();
+                Labeldc.Text = sdr["DCNo"].ToString();
+                Labeldate.Text = sdr["DCDate"].ToString();
+                Labelkn.Text = sdr["Attention"].ToString();
+                Labelcn.Text = sdr["Contact"].ToString();
+                Labelres.Text = sdr["Responsible_By"].ToString();
+                TQ.Text = sdr["TQty"].ToString();
+                Tot.Text = sdr["TAmt"].ToString();
+                GST.Text = sdr["Gst_per"].ToString();
+                LabelGT.Text = sdr["GTotal"].ToString();
+                Labelrm.Text = sdr["Remark"].ToString();
+                Labeltn.Text = sdr["Transport"].ToString();
+                Labelvn.Text = sdr["vehicleNo"].ToString();
+                Labelln.Text = sdr["LRNo"].ToString();
+                //Labelack.Text = sdr["Acknowledgement"].ToString();
+               
+                
+            }
+            
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+            con.Close();
+        }
+       
+    }
+  //  protected void display1()
+  //  {
+  //      String strConnString = ConfigurationManager.ConnectionStrings["LocalSqlServer"].ConnectionString;
+  //      String strQuery = "select distinct Totalamt,Totalqty from Challancalculation where" + " DCNo = @DCNo";
+  //      SqlConnection con = new SqlConnection(strConnString);
+  //      SqlCommand cmd = new SqlCommand();
+  //      cmd.Parameters.AddWithValue("@DCNo", Label1.Text);
+        
+  //      cmd.CommandType = CommandType.Text;
+  //      cmd.CommandText = strQuery;
+  //      cmd.Connection = con;
+  //      try
+  //      {
+  //          con.Open();
+  //          SqlDataReader sdr = cmd.ExecuteReader();
+  //          while (sdr.Read())
+  //          {
+  //              Label2.Text = sdr["Totalamt"].ToString();
+  //              Label4.Text = sdr["Totalqty"].ToString();
+
+  //          }
+  //      }
+  //      catch (Exception ex)
+  //      {
+  //          throw ex;
+  //      }
+  //      finally
+  //      {
+  //          con.Close();
+  //      }
+  //}
+}

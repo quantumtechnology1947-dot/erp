@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2895</Id>
+    <ItemCode>-</ItemCode>
+    <Description>NEW PALLET FOR 6JM809605 Body side LH SK-SUV</Description>
+    <Qty>124</Qty>
+    <ReleasedQty>124</ReleasedQty>
+    <WONo>J0146</WONo>
+    <WRNo>0548</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2896</Id>
+    <ItemCode>-</ItemCode>
+    <Description>NEW PALLET FOR 6JM809606 Body side RH SK-SUV</Description>
+    <Qty>73</Qty>
+    <ReleasedQty>73</ReleasedQty>
+    <WONo>J0146</WONo>
+    <WRNo>0548</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2897</Id>
+    <ItemCode>-</ItemCode>
+    <Description>NEW PALLET FOR 6JM831111 Front Door Outer LH SK-SUV</Description>
+    <Qty>20</Qty>
+    <ReleasedQty>11</ReleasedQty>
+    <WONo>J0146</WONo>
+    <WRNo>0548</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2898</Id>
+    <ItemCode>-</ItemCode>
+    <Description>NEW PALLET FOR 6JM831112 Front Door Outer RH SK-SUV</Description>
+    <Qty>21</Qty>
+    <ReleasedQty>12</ReleasedQty>
+    <WONo>J0146</WONo>
+    <WRNo>0548</WRNo>
+  </Table1>
+</NewDataSet>

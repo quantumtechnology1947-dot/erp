@@ -1,0 +1,194 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.IO;
+
+public partial class Module_ProjectManagement_Reports_ProjectSummary_Shortage_M : System.Web.UI.Page
+{
+
+    clsFunctions fun = new clsFunctions();
+    string connStr = "";
+    SqlConnection con;
+    int CompId = 0;
+    int FinYearId = 0;
+    string sId = "";
+    string WONo = "";
+    string SwitchTo = string.Empty;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            connStr = fun.Connection();
+            con = new SqlConnection(connStr);
+            CompId = Convert.ToInt32(Session["compid"]);
+            FinYearId = Convert.ToInt32(Session["finyear"]);
+            sId = Session["username"].ToString();
+
+            if (!String.IsNullOrEmpty(Request.QueryString["WONo"]))
+            {
+                lblWo.Text = Request.QueryString["WONo"].ToString();
+                WONo = Request.QueryString["WONo"].ToString();
+            }
+
+            if (!String.IsNullOrEmpty(Request.QueryString["SwitchTo"]))
+            {
+
+                SwitchTo = Request.QueryString["SwitchTo"].ToString();
+            }
+            if (!Page.IsPostBack)
+            {
+                this.FillGrid_Creditors();
+            }
+
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+
+    public void FillGrid_Creditors()
+    {
+        try
+        {           
+           
+                string str = string.Empty;
+                if (SwitchTo == "2")
+                {
+                    str = "select distinct(tblDG_Item_Master.ItemCode),tblDG_Item_Master.StockQty, tblDG_Item_Master.Id,tblDG_Item_Master.ManfDesc,Unit_Master.Symbol As UOMBasic from tblDG_Item_Master inner join tblDG_BOM_Master on tblDG_Item_Master.Id=tblDG_BOM_Master.ItemId inner join Unit_Master on  tblDG_Item_Master.UOMBasic=Unit_Master.Id  And tblDG_Item_Master.CId is null And WONo='" + WONo + "' and  tblDG_Item_Master.CompId='" + CompId + "'And tblDG_Item_Master.FinYearId<='" + FinYearId + "' AND tblDG_BOM_Master.CId not in (Select PId from tblDG_BOM_Master where WONo='" + WONo + "' and  tblDG_Item_Master.CompId='" + CompId + "' And tblDG_Item_Master.FinYearId<='" + FinYearId + "') Order By Id ASC";
+                }
+                SqlCommand cmdCustWo = new SqlCommand(str, con);
+                SqlDataAdapter daCustWo = new SqlDataAdapter(cmdCustWo);
+                DataSet DSCustWo = new DataSet();
+                daCustWo.Fill(DSCustWo);
+                DataTable dt2 = new DataTable();
+                dt2.Columns.Add(new System.Data.DataColumn("SN", typeof(Int32)));
+                dt2.Columns.Add(new System.Data.DataColumn("ItemCode", typeof(string)));//1
+                dt2.Columns.Add(new System.Data.DataColumn("Description", typeof(string)));//2
+                dt2.Columns.Add(new System.Data.DataColumn("UOM", typeof(string)));//3
+                dt2.Columns.Add(new System.Data.DataColumn("BOMQty", typeof(string)));//4
+                dt2.Columns.Add(new System.Data.DataColumn("WISQty", typeof(double)));//5
+                dt2.Columns.Add(new System.Data.DataColumn("StockQty", typeof(double)));//6
+                dt2.Columns.Add(new System.Data.DataColumn("ShortQty", typeof(double)));//7
+                DataRow dr1;
+                int sn = 1;
+                double TotQty = 0;
+                for (int iw = 0; iw < DSCustWo.Tables[0].Rows.Count; iw++)
+                {
+                    dr1 = dt2.NewRow();
+                    double liQty = 0;
+                    double TotWisQty = 0;
+                    double StockQty = 0;
+                    dr1[1] = DSCustWo.Tables[0].Rows[iw]["ItemCode"].ToString();
+                    dr1[2] = DSCustWo.Tables[0].Rows[iw]["ManfDesc"].ToString();
+                    dr1[3] = DSCustWo.Tables[0].Rows[iw]["UOMBasic"].ToString();
+                    liQty = fun.AllComponentBOMQty(CompId, WONo, DSCustWo.Tables[0].Rows[iw]["Id"].ToString(), FinYearId);
+                    dr1[4] = liQty;                   
+                    dr1[0] = sn.ToString();                   
+                    TotWisQty = fun.CalWISQty(CompId.ToString(), WONo, DSCustWo.Tables[0].Rows[iw]["Id"].ToString());
+                    StockQty = Convert.ToDouble(DSCustWo.Tables[0].Rows[iw]["StockQty"].ToString());
+                    dr1[5] = TotWisQty;
+                    dr1[6] = StockQty;
+                    double ShortQty = 0;                    
+                    ShortQty= Math.Round((liQty-TotWisQty),3);
+                    dr1[7] = ShortQty;
+                    TotQty += ShortQty;
+                    if (ShortQty > 0)
+                    {
+                        sn++;
+                        dt2.Rows.Add(dr1);
+                        dt2.AcceptChanges();
+                    }
+                }
+                GridView3.DataSource = dt2;
+                GridView3.DataBind();
+                Control df = GridView3.Controls[GridView3.Controls.Count - 1].Controls[0];
+                Label lbl = df.FindControl("lblShortQty1") as Label;
+                lbl.Text ="Tot Short Qty - "+ TotQty.ToString();
+
+                ViewState["dtList"] = dt2;
+
+        }
+        catch (Exception ex)
+        { }
+    }
+
+    protected void btnExpor_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+            DataTable dt1 = (DataTable)ViewState["dtList"];
+           
+            dt1.Columns[1].ColumnName = "Item Code";
+            dt1.Columns[2].ColumnName = "Description";            
+            dt1.Columns[3].ColumnName = "UOM";
+            dt1.Columns[4].ColumnName = "BOM Qty";
+            dt1.Columns[5].ColumnName = "WIS Qty";
+            dt1.Columns[6].ColumnName = "Stock Qty";
+            dt1.Columns[7].ColumnName = "Short Qty";
+            
+            if (dt1 == null)
+            {
+                throw new Exception("No Records to Export");
+
+            }
+            string Path = "D:\\ImportExcelFromDatabase\\myexcelfile_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + ".xls";
+            FileInfo FI = new FileInfo(Path);
+            StringWriter stringWriter = new StringWriter();
+            HtmlTextWriter htmlWrite = new HtmlTextWriter(stringWriter);
+            System.Web.UI.WebControls.DataGrid DataGrd = new System.Web.UI.WebControls.DataGrid();
+            DataGrd.DataSource = dt1;
+            DataGrd.DataBind();
+            DataGrd.RenderControl(htmlWrite);
+            string directory = Path.Substring(0, Path.LastIndexOf("\\"));// GetDirectory(Path);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+            System.IO.StreamWriter vw = new System.IO.StreamWriter(Path, true);
+            stringWriter.ToString().Normalize();
+            vw.Write(stringWriter.ToString());
+            vw.Flush();
+            vw.Close();
+            WriteAttachment(FI.Name, "application/vnd.ms-excel", stringWriter.ToString());
+        }
+        catch (Exception ex)
+        {
+            string mystring = string.Empty;
+            mystring = "No Records to Export.";
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + mystring + "');", true);
+        }
+    }
+
+    public static void WriteAttachment(string FileName, string FileType, string content)
+    {
+        try
+        {
+            HttpResponse Response = System.Web.HttpContext.Current.Response;
+            Response.ClearHeaders();
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + FileName);
+            Response.ContentType = FileType;
+            Response.Write(content);
+            Response.End();
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ProjectSummary.aspx?ModId=7");
+    }
+}

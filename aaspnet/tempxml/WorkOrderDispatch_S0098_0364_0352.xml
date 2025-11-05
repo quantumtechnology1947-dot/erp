@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1359</Id>
+    <ItemCode>1</ItemCode>
+    <Description>LONG RAIL C63 (4mtrs X 11nos. = 44 mtrs)</Description>
+    <IssuedQty>44</IssuedQty>
+    <DispatchQty>44</DispatchQty>
+    <WONo>S0098</WONo>
+    <DANo>0352</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1360</Id>
+    <ItemCode>2</ItemCode>
+    <Description>CROSS RAIL C63 (2.5Mtrs X 7 nos. = 17.5Mtrs)</Description>
+    <IssuedQty>17.5</IssuedQty>
+    <DispatchQty>17.5</DispatchQty>
+    <WONo>S0098</WONo>
+    <DANo>0352</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1361</Id>
+    <ItemCode>3</ItemCode>
+    <Description>CROSS RAIL C63 (2.7Mtrs X 1 no. = 2.7Mtrs)</Description>
+    <IssuedQty>2.7</IssuedQty>
+    <DispatchQty>2.7</DispatchQty>
+    <WONo>S0098</WONo>
+    <DANo>0352</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1362</Id>
+    <ItemCode>4</ItemCode>
+    <Description>CROSS RAIL C63 (3Mtrs X 2 nos. = 6Mtrs)</Description>
+    <IssuedQty>6</IssuedQty>
+    <DispatchQty>6</DispatchQty>
+    <WONo>S0098</WONo>
+    <DANo>0352</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1363</Id>
+    <ItemCode>5</ItemCode>
+    <Description>TROLLEY SET C63</Description>
+    <IssuedQty>10</IssuedQty>
+    <DispatchQty>10</DispatchQty>
+    <WONo>S0098</WONo>
+    <DANo>0352</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

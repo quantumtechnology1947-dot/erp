@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3045</Id>
+    <ItemCode>5195791</ItemCode>
+    <Description>RAIL LOAD TROLLEY FR SPOT GUN</Description>
+    <Qty>6</Qty>
+    <ReleasedQty>6</ReleasedQty>
+    <WONo>P0075</WONo>
+    <WRNo>0563</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3046</Id>
+    <ItemCode>5195679</ItemCode>
+    <Description>RAIL TOOL TROLLEY FR BALANCER</Description>
+    <Qty>10</Qty>
+    <ReleasedQty>10</ReleasedQty>
+    <WONo>P0075</WONo>
+    <WRNo>0563</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3047</Id>
+    <ItemCode>5195678</ItemCode>
+    <Description>RAIL I-BEAM CLAMP</Description>
+    <Qty>5</Qty>
+    <ReleasedQty>5</ReleasedQty>
+    <WONo>P0075</WONo>
+    <WRNo>0563</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3048</Id>
+    <ItemCode>5195793</ItemCode>
+    <Description>RAIL CROSS TROLLEY</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>P0075</WONo>
+    <WRNo>0563</WRNo>
+  </Table1>
+</NewDataSet>

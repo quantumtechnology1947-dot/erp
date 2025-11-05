@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2659</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Channel Support (without 10mm Clamps)</Description>
+    <Qty>20</Qty>
+    <ReleasedQty>20</ReleasedQty>
+    <WONo>S0185</WONo>
+    <WRNo>0469</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2660</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Channel Support</Description>
+    <Qty>20</Qty>
+    <ReleasedQty>20</ReleasedQty>
+    <WONo>S0185</WONo>
+    <WRNo>0469</WRNo>
+  </Table1>
+</NewDataSet>

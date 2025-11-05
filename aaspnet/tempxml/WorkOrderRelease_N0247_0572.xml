@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3082</Id>
+    <ItemCode>-</ItemCode>
+    <Description>PANEL ASSY WHEEL HOUSE LH</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0247</WONo>
+    <WRNo>0572</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3083</Id>
+    <ItemCode>-</ItemCode>
+    <Description>PANEL ASSY GEAR SHIFTER</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0247</WONo>
+    <WRNo>0572</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3084</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS MEMBER ASSY FRONT UPPER</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0247</WONo>
+    <WRNo>0572</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3085</Id>
+    <ItemCode>-</ItemCode>
+    <Description>PANEL ASSY BODY MOUNT FRT LWR LINK LH</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0247</WONo>
+    <WRNo>0572</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3086</Id>
+    <ItemCode>-</ItemCode>
+    <Description>PANEL ASSY BODY MOUNT FRT LWR LINK RH</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0247</WONo>
+    <WRNo>0572</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3087</Id>
+    <ItemCode>-</ItemCode>
+    <Description>BRACKET ASSY PARKING BRAKE</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0247</WONo>
+    <WRNo>0572</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3088</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS MEMBER ASSY LOWER</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>N0247</WONo>
+    <WRNo>0572</WRNo>
+  </Table1>
+</NewDataSet>

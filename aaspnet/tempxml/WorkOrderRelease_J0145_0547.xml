@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2887</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Modifcation for 6JM809605 Body side LH	SK-SUV</Description>
+    <Qty>152</Qty>
+    <ReleasedQty>109</ReleasedQty>
+    <WONo>J0145</WONo>
+    <WRNo>0547</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2888</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Modifcation for 6JM809606 Body side RH SK-SUV</Description>
+    <Qty>203</Qty>
+    <ReleasedQty>203</ReleasedQty>
+    <WONo>J0145</WONo>
+    <WRNo>0547</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2889</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Modifcation for 6JM831111 Front Door Outer LH SK-SUV</Description>
+    <Qty>30</Qty>
+    <ReleasedQty>30</ReleasedQty>
+    <WONo>J0145</WONo>
+    <WRNo>0547</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2890</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Modifcation for 6JM831112 Front Door Outer RH SK-SUV</Description>
+    <Qty>29</Qty>
+    <ReleasedQty>29</ReleasedQty>
+    <WONo>J0145</WONo>
+    <WRNo>0547</WRNo>
+  </Table1>
+</NewDataSet>

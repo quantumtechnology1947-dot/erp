@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3041</Id>
+    <ItemCode>5203890</ItemCode>
+    <Description>RAIL SAFETY WIRE ROPE</Description>
+    <Qty>50</Qty>
+    <ReleasedQty>50</ReleasedQty>
+    <WONo>P0074</WONo>
+    <WRNo>0564</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3042</Id>
+    <ItemCode>5140130</ItemCode>
+    <Description>GANTRY RAIL STOPPER</Description>
+    <Qty>30</Qty>
+    <ReleasedQty>30</ReleasedQty>
+    <WONo>P0074</WONo>
+    <WRNo>0564</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3043</Id>
+    <ItemCode>5195678</ItemCode>
+    <Description>RAIL I-BEAM CLAMP</Description>
+    <Qty>10</Qty>
+    <ReleasedQty>10</ReleasedQty>
+    <WONo>P0074</WONo>
+    <WRNo>0564</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3044</Id>
+    <ItemCode>5195792</ItemCode>
+    <Description>RAIL HOIST TROLLEY</Description>
+    <Qty>4</Qty>
+    <ReleasedQty>4</ReleasedQty>
+    <WONo>P0074</WONo>
+    <WRNo>0564</WRNo>
+  </Table1>
+</NewDataSet>

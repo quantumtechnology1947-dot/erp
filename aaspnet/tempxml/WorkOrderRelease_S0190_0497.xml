@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2745</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Cross Rail -2.20M</Description>
+    <Qty>10</Qty>
+    <ReleasedQty>10</ReleasedQty>
+    <WONo>S0190</WONo>
+    <WRNo>0497</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2746</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Cross Rail Accessories (Cross Trolley, Load Trolley, Tool Trolley, Cable trolley, Couplers)</Description>
+    <Qty>10</Qty>
+    <ReleasedQty>10</ReleasedQty>
+    <WONo>S0190</WONo>
+    <WRNo>0497</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "erp", "http://localhost/erp", "{DCDD8B1C-FA57-4DB0-8AC4-0DB4EB54C72E}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/erp"
+		Debug.AspNetCompiler.PhysicalPath = "D:\Inetpub\wwwroot\NewERP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\erp\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/erp"
+		Release.AspNetCompiler.PhysicalPath = "D:\Inetpub\wwwroot\NewERP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\erp\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "D:\Inetpub\wwwroot\NewERP\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCDD8B1C-FA57-4DB0-8AC4-0DB4EB54C72E}.Debug|.NET.ActiveCfg = Debug|.NET
+		{DCDD8B1C-FA57-4DB0-8AC4-0DB4EB54C72E}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

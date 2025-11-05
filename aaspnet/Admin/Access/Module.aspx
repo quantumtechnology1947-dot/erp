@@ -1,0 +1,125 @@
+﻿<%@ page language="C#" masterpagefile="~/MasterPage.master" autoeventwireup="true" inherits="Admin_Access_Module, newerp_deploy" title="ERP" theme="Default" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+
+    <script src="../../Javascript/loadingNotifier.js" type="text/javascript"></script>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        </style>
+        <link type="text/css" href="../../Css/yui-datatable.css" rel="stylesheet" />
+    <link href="../../Css/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <script src="../../Javascript/JScript.js" type="text/javascript"></script>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="cp3" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cp1" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cp2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="MainContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <p><br /></p><p></p>
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+    <table align="center" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td>
+                <br />
+                <table align="center" cellpadding="0" cellspacing="0" class="box3" width="320">
+                    <tr>
+                        <td colspan="2" style="background:url('../../images/hdbg.JPG')" height="21" class="fontcsswhite">&nbsp;<strong>Module</strong></td>
+                    </tr>
+                    <tr>
+                        <td height="21" >
+&nbsp;
+    <asp:Label ID="Label2" runat="server" Text="Module Name"></asp:Label>
+                        </td>
+                        <td>
+    <asp:TextBox ID="TxtModuleName" runat="server" CssClass="box3" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="21">
+&nbsp;
+    <asp:Label ID="Label3" runat="server" Text="Link Page"></asp:Label>
+                        </td>
+                        <td>
+    <asp:TextBox ID="TxtLinkPage" runat="server" CssClass="box3" Width="200px"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="25">
+                            &nbsp;</td>
+                        <td>
+    <asp:Button ID="btnSave" runat="server" onclick="btnSave_Click" Text=" Save " CssClass="redbox" />
+                            <asp:Button ID="Button1" runat="server" CssClass="redbox" 
+                                onclick="Button1_Click" Text="Cancel" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td align="center">
+            <asp:Panel ID="Panel1" runat ="server" ScrollBars="Auto" Width="70%" Height="370px" >
+    <asp:GridView ID="GridView2" runat="server" 
+        AutoGenerateColumns="False" 
+        DataKeyNames="ModId" DataSourceID="LocalSqlServer" style="margin-right: 1px" 
+                    CssClass="yui-datatable-theme" Width="100%">
+        <Columns>
+            <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" >
+                <ItemStyle Width="2%" HorizontalAlign="Center" />
+            </asp:CommandField>
+            <asp:BoundField DataField="ModId" HeaderText="ModId" InsertVisible="False" 
+                ReadOnly="True" SortExpression="ModId" >
+                <ItemStyle Width="3%" HorizontalAlign="Center" />
+            </asp:BoundField>
+            <asp:BoundField DataField="ModName" HeaderText="ModName" 
+                SortExpression="ModName" >
+                <ItemStyle Width="20%" />
+            </asp:BoundField>
+            <asp:BoundField DataField="DashBoardPage" HeaderText="DashBoardPage" 
+                SortExpression="DashBoardPage" >
+                <ItemStyle Width="20%" />
+            </asp:BoundField>
+        </Columns>
+    </asp:GridView>
+                <asp:SqlDataSource ID="LocalSqlServer" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:LocalSqlServer %>" 
+                    DeleteCommand="DELETE FROM [tblModule_Master] WHERE [ModId] = @ModId" 
+                    InsertCommand="INSERT INTO [tblModule_Master] ([ModName], [DashBoardPage]) VALUES (@ModName, @DashBoardPage)" 
+                    ProviderName="System.Data.SqlClient" 
+                    SelectCommand="SELECT * FROM [tblModule_Master] Order by [ModId] Desc" 
+                    UpdateCommand="UPDATE [tblModule_Master] SET [ModName] = @ModName, [DashBoardPage] = @DashBoardPage WHERE [ModId] = @ModId">
+                    <DeleteParameters>
+                        <asp:Parameter Name="ModId" Type="Int32" />
+                    </DeleteParameters>
+                    <UpdateParameters>
+                        <asp:Parameter Name="ModName" Type="String" />
+                        <asp:Parameter Name="DashBoardPage" Type="String" />
+                        <asp:Parameter Name="ModId" Type="Int32" />
+                    </UpdateParameters>
+                    <InsertParameters>
+                        <asp:Parameter Name="ModName" Type="String" />
+                        <asp:Parameter Name="DashBoardPage" Type="String" />
+                    </InsertParameters>
+                </asp:SqlDataSource>
+                </asp:Panel>
+            </td>
+        </tr>
+    </table>
+    
+</asp:Content>
+<asp:Content ID="Content8" ContentPlaceHolderID="ContentPlaceHolder4" Runat="Server">
+</asp:Content>
+

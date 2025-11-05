@@ -1,0 +1,72 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2435</Id>
+    <ItemCode>1</ItemCode>
+    <Description>GUN
+RAIL-CROSS
+RAIL
+C63
+2.5MTR
+CROSS
+RAIL
+C63
+2.5MTR
+Cross
+Rail
+3x10=30mt</Description>
+    <Qty>30</Qty>
+    <ReleasedQty>30</ReleasedQty>
+    <WONo>S0172</WONo>
+    <WRNo>0409</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2436</Id>
+    <ItemCode>2</ItemCode>
+    <Description>GUN
+RAIL-LONG
+C63
+WITH
+ALL
+FITTING
+ACCESSORIES
+Long
+Rail
+4x3=12mtr
+&amp; 6x2=12mtr</Description>
+    <Qty>24</Qty>
+    <ReleasedQty>24</ReleasedQty>
+    <WONo>S0172</WONo>
+    <WRNo>0409</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2437</Id>
+    <ItemCode>3</ItemCode>
+    <Description>GUN
+RAIL-TROLLY
+SETS
+FOR
+C-63
+TROLLY
+SETS
+FOR
+C-63
+RAILS</Description>
+    <Qty>5</Qty>
+    <ReleasedQty>5</ReleasedQty>
+    <WONo>S0172</WONo>
+    <WRNo>0409</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2438</Id>
+    <ItemCode>4</ItemCode>
+    <Description>GUN-PARKING
+SWITCH
+PARKING
+SWITCH</Description>
+    <Qty>5</Qty>
+    <ReleasedQty>5</ReleasedQty>
+    <WONo>S0172</WONo>
+    <WRNo>0409</WRNo>
+  </Table1>
+</NewDataSet>

@@ -1,0 +1,130 @@
+﻿<%@ page language="C#" masterpagefile="~/MasterPage.master" autoeventwireup="true" inherits="Module_HR_Masters_Designation, newerp_deploy" title="ERP" theme="Default" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<link href="../../../Css/yui-datatable.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/StyleSheet.css" rel="stylesheet" type="text/css" />
+      <script src="../../../Javascript/PopUpMsg.js" type="text/javascript"></script>
+
+    <script src="../../../Javascript/loadingNotifier.js" type="text/javascript"></script>
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cp3" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cp1" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cp2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="MainContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+<table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="left">
+                <table cellpadding="0" cellspacing="0" width="600px">
+                    <tr>
+                        <td align="left"  valign="middle" style="background:url(../../../images/hdbg.JPG)" height="21" class="fontcsswhite"><b>&nbsp;Designation</b></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
+                                AutoGenerateColumns="False" DataKeyNames="Id" 
+                                DataSourceID="SqlDataSource1" Width="100%" 
+                                onrowcommand="GridView1_RowCommand" onrowdeleted="GridView1_RowDeleted" 
+                                onrowupdated="GridView1_RowUpdated" ShowFooter="True" PageSize="20" 
+                                CssClass="yui-datatable-theme" onrowdatabound="GridView1_RowDataBound">
+                                <PagerSettings PageButtonCount="20" />
+                                <Columns>
+                                    <asp:TemplateField HeaderText="SN">
+                                    <ItemTemplate>
+                                    <%# Container.DataItemIndex+1 %>
+                                    </ItemTemplate>
+                                        <ItemStyle HorizontalAlign="Right" Width="3%" />
+                                        <FooterTemplate>
+                                        <asp:Button ID="btnInsert" runat="server" CommandName="Add" OnClientClick=" return confirmationAdd()"  CssClass="redbox"  Text="Insert" ValidationGroup="abc" />
+                                    </FooterTemplate>
+                                    </asp:TemplateField>
+                                    <asp:CommandField  ButtonType="Link" ValidationGroup="A" ShowEditButton="True">
+                                    <ItemStyle HorizontalAlign="Center" Width="7%" />
+                                    </asp:CommandField>
+                                     <asp:CommandField ButtonType="Link" ShowDeleteButton="True" >
+                                    <ItemStyle HorizontalAlign="Center" Width="7%" />
+                                    </asp:CommandField>
+                                    <asp:TemplateField HeaderText="Type">
+                                        <ItemStyle Width="45%" />
+                                        <ItemTemplate>
+                                        <asp:Label ID="lblType" runat="server" Text='<%#Eval("Type") %>'>    </asp:Label>
+                                        </ItemTemplate>
+                                        <EditItemTemplate>
+                                        <asp:TextBox ID="lblType0" runat="server" Width="150" CssClass="box3" Text='<%#Bind("Type") %>'>
+                                        </asp:TextBox>
+                                         <asp:RequiredFieldValidator ID="ReqType0" runat="server" ErrorMessage="*" ControlToValidate="lblType0" ValidationGroup="A"></asp:RequiredFieldValidator>
+                                        </EditItemTemplate>
+                                        <FooterTemplate>
+                                        <asp:TextBox ID="txtType" runat="server"  Width="150" CssClass="box3">
+                                        </asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="ReqType" runat="server" ErrorMessage="*" ControlToValidate="txtType" ValidationGroup="abc"></asp:RequiredFieldValidator>
+                                        </FooterTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Symbol">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblSymbol" runat="server" Text='<%#Eval("Symbol") %>'></asp:Label>
+                                        </ItemTemplate>
+                                        <EditItemTemplate>
+                                        <asp:TextBox ID="lblSymbol0" runat="server"  Width="70" CssClass="box3" Text='<%#Bind("Symbol") %>'>
+                                        </asp:TextBox>
+                                         <asp:RequiredFieldValidator ID="ReqSymb0" runat="server" ErrorMessage="*" ControlToValidate="lblSymbol0" ValidationGroup="A"></asp:RequiredFieldValidator>
+                                        </EditItemTemplate>
+                                        <FooterTemplate>
+                                        <asp:TextBox ID="txtSymbol" runat="server"  Width="70" CssClass="box3">
+                                        </asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="ReqSymb" runat="server" ErrorMessage="*" ControlToValidate="txtSymbol" ValidationGroup="abc"></asp:RequiredFieldValidator>
+                                        </FooterTemplate>
+                                        <ItemStyle HorizontalAlign="Center" Width="10%" />
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Id" Visible="false">
+                                    <ItemTemplate>
+                                    <asp:Label ID="lblID" runat="server" Text='<%#Eval("Id") %>'></asp:Label></ItemTemplate></asp:TemplateField>
+                                 
+                                </Columns>
+                                
+                                <EmptyDataTemplate>
+                                <asp:Button ID="btnInsert" runat="server" ValidationGroup="B" CommandName="Add1" OnClientClick=" return confirmationAdd()"  CssClass="redbox"  Text="Insert" />
+                                <asp:TextBox ID="txtType" runat="server"  Width="70" CssClass="box3"></asp:TextBox>
+       <asp:RequiredFieldValidator ID="Req1" runat="server" ErrorMessage="*" ControlToValidate="txtType" ValidationGroup="B"></asp:RequiredFieldValidator>  
+                                <asp:TextBox ID="txtSymbol" runat="server"  Width="70" CssClass="box3"></asp:TextBox>
+         <asp:RequiredFieldValidator ID="Req2" runat="server" ErrorMessage="*" ControlToValidate="txtSymbol" ValidationGroup="B"></asp:RequiredFieldValidator> 
+                                </EmptyDataTemplate>
+                            </asp:GridView>
+                            <asp:Label ID="Label2" runat="server" Font-Bold="True" ForeColor="Red"></asp:Label>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                ConnectionString="<%$ connectionStrings:LocalSqlServer %>" 
+                                DeleteCommand="DELETE FROM [tblHR_Designation] WHERE [Id] = @Id" 
+                                InsertCommand="INSERT INTO [tblHR_Designation] ([Type], [Symbol]) VALUES (@Type, @Symbol)" 
+                                ProviderName="System.Data.SqlClient" 
+                                SelectCommand="SELECT [Id], [Type], [Symbol] FROM [tblHR_Designation] Order by [Id] Desc"
+                                UpdateCommand="UPDATE [tblHR_Designation] SET [Type] = @Type, [Symbol] = @Symbol WHERE [Id] = @Id">
+                                <DeleteParameters>
+                                    <asp:Parameter Name="Id" Type="Int32" />
+                                </DeleteParameters>
+                                <UpdateParameters>
+                                    <asp:Parameter Name="Type" Type="String" />
+                                    <asp:Parameter Name="Symbol" Type="String" />
+                                    <asp:Parameter Name="Id" Type="Int32" />
+                                </UpdateParameters>
+                                <InsertParameters>
+                                    <asp:Parameter Name="Type" Type="String" />
+                                    <asp:Parameter Name="Symbol" Type="String" />
+                                </InsertParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</asp:Content>
+<asp:Content ID="Content8" ContentPlaceHolderID="ContentPlaceHolder4" Runat="Server">
+</asp:Content>
+

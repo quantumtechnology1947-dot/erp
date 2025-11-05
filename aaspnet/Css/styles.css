@@ -1,0 +1,218 @@
+﻿.example-panel
+{
+	width: 100%;
+	height:530px;	
+	padding: 55px 0 0 8px;
+}
+.RadSplitter
+{
+	border: none !important;
+	margin: 0 !important;
+}
+
+.RadPanelBar .rootGroup
+{
+	border-left: none;
+	border-right: none;
+}
+
+.calendar-container
+{
+	width:220px;
+	margin: 0 auto 7px auto;
+}
+
+.calendar-title
+{
+    height: 26px;
+    padding: 6px 5px;
+    font-size: 16px;
+    color: #1e395b;
+    
+}
+
+#RadScheduler1Panel
+{
+	width: 100%;
+	overflow: hidden;
+}
+
+div.RadScheduler
+{
+	width: 100%;
+}
+
+/* Styles for the appointment Subject */
+.RadScheduler .rsAptSubject 
+{
+    text-align: left; 
+    margin: 0 0 3px;
+    font-size: 11px; 
+    font-weight: bold; 
+    color: #369;
+    height: 17px;
+    border-bottom: 1px solid #8bf;
+    width: 100%; 
+    overflow: hidden;
+    
+}	    
+
+/* Remove the Subject underline for all-day appointments */
+.RadScheduler .rsAllDayRow .rsAptSubject 
+{
+    border-bottom: none;
+}
+
+.exampleContainer
+{
+	position: relative;
+	z-index: 2;
+	height:430px;
+	top: -18px;
+	left: 0px;
+}
+* html .exampleContainer { position: static; } 
+
+.modalPopup
+    {
+    background-color: #696969;
+    filter: alpha(opacity=40);
+    opacity: 0.7;
+    xindex:-1;
+    
+    }
+    .style2
+    {
+        height: 39px;
+    }
+    
+    
+    .LeftRightTopBottomEdge {  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 1px; 
+border-right-width: 1px; 
+border-bottom-width: 1px; 
+border-left-width: 1px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.leftedge {  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 0px; 
+border-right-width: 0px; 
+border-bottom-width: 0px; 
+border-left-width: 1px; 
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.leftedge2 {  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 0px; 
+border-right-width: 0px; 
+border-bottom-width: 0px; 
+border-left-width: 1px; 
+font-family:Tahoma; font-weight:bold; font-size:11px
+}
+
+
+.rightedge {  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 0px; 
+border-right-width: 1px; 
+border-bottom-width: 0px; 
+border-left-width: 0px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.topedge {  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 1px; 
+border-right-width: 0px; 
+border-bottom-width: 0px; 
+border-left-width: 0px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+
+.bottomedge {  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 0px; 
+border-right-width: 0px; 
+border-bottom-width: 1px; 
+border-left-width: 0px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.topleftedge 
+{  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 1px; 
+border-right-width: 0px; 
+border-bottom-width: 0px; 
+border-left-width: 1px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.toprightedge 
+{  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 1px; 
+border-right-width: 1px; 
+border-bottom-width: 0px; 
+border-left-width: 0px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.topleftedge 
+{  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 1px; 
+border-right-width: 0px; 
+border-bottom-width: 0px; 
+border-left-width: 1px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.bottomrightedge 
+{  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 0px; 
+border-right-width: 1px; 
+border-bottom-width: 1px; 
+border-left-width: 0px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.bottomleftedge 
+{  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 0px; 
+border-right-width: 0px; 
+border-bottom-width: 1px; 
+border-left-width: 1px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+.topbottomedge 
+{  
+border-color: #666666 #666666 #666666 #666666; 
+border-style: solid; 
+border-top-width: 1px; 
+border-right-width: 0px; 
+border-bottom-width: 1px; 
+border-left-width: 0px;
+font-family:Tahoma; font-weight:normal; font-size:11px
+}
+
+ 

@@ -1,0 +1,86 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="CreditorsDebitors_InDetailList.aspx.cs" Inherits="Module_Accounts_Transactions_CreditorsDebitors_InDetailList" Title="ERP"  Theme="Default"%>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+<%@ Register assembly="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="../../../Css/yui-datatable.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="../../../Css/styles.css" rel="stylesheet" type="text/css" />
+    <script src="../../../Javascript/PopUpMsg.js" type="text/javascript"></script>
+    <script src="../../../Javascript/loadingNotifier.js" type="text/javascript"></script>
+    <style type="text/css">
+        .style4
+        { 
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-style: normal; 
+            line-height: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            color: #FFFFFF;
+            text-decoration: none;
+            height: 21px;
+        }
+        .style5
+        {
+            font-weight: bold;
+        }
+    </style>
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cp3" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cp1" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cp2" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="MainContent" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+ 
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+    <table align="center" style="width: 100%" cellpadding="0" cellspacing="0"  >
+        <tr>
+            <td align="left" valign="middle" 
+                style="background:url(../../../images/hdbg.JPG)" 
+                class="style4" colspan="2"><b>
+                &nbsp;Creditors / Debitors In Detail </b></td>
+        </tr>
+        <tr>
+        <td align="center" style="height:27px">
+        <asp:Label ID="Label5" runat="server" CssClass="style5" Text="Date From:"></asp:Label>
+                <asp:TextBox ID="txtFrmDt" runat="server" CssClass="box3" Width="100px"></asp:TextBox>
+                <cc1:CalendarExtender ID="txtFrmDt_CalendarExtender" runat="server" CssClass="cal_Theme2"
+                    Enabled="True" Format="dd-MM-yyyy" TargetControlID="txtFrmDt">
+                </cc1:CalendarExtender>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" 
+                            ControlToValidate="txtFrmDt" ErrorMessage="*" 
+                            ValidationExpression="^([1-9]|0[1-9]|[12][0-9]|3[01])[- /.]([1-9]|0[1-9]|1[012])[- /.][0-9]{4}$" 
+                            ValidationGroup="A"></asp:RegularExpressionValidator>
+                &nbsp;-&nbsp;<asp:Label ID="Label6" runat="server" CssClass="style5" Text="To:"></asp:Label>
+                <asp:TextBox ID="txtToDt" runat="server" CssClass="box3" Width="100px"></asp:TextBox>
+                <cc1:CalendarExtender ID="txtToDt_CalendarExtender" runat="server" CssClass="cal_Theme2"
+                    Enabled="True" Format="dd-MM-yyyy" TargetControlID="txtToDt"></cc1:CalendarExtender> <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
+                            ControlToValidate="txtToDt" ErrorMessage="*" 
+                            ValidationExpression="^([1-9]|0[1-9]|[12][0-9]|3[01])[- /.]([1-9]|0[1-9]|1[012])[- /.][0-9]{4}$" 
+                            ValidationGroup="A"></asp:RegularExpressionValidator>&nbsp;&nbsp;<asp:Button 
+                ID="btnSearch" runat="server" Text="Search" CssClass="redbox" 
+                onclick="btnSearch_Click" />&nbsp;&nbsp;<asp:Button ID="btnCancel" runat="server" CssClass="redbox"  onclick="btnCancel_Click" Text="Cancel" ValidationGroup="A" />
+               
+        </td>
+        </tr>
+            <tr>
+            <td align="center">
+               <iframe runat="server" id="ifrm" width="100%" height="430px" frameborder="0"></iframe>
+            </td>
+            </tr>
+        <tr>
+       
+        </tr>
+      
+    </table>
+</asp:Content>
+<asp:Content ID="Content8" ContentPlaceHolderID="ContentPlaceHolder4" Runat="Server">
+</asp:Content>
+

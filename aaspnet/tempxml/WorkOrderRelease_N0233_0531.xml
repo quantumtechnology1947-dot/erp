@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2833</Id>
+    <ItemCode>-</ItemCode>
+    <Description>STORAGE TROLLEY FOR AIR DRYING OF SEALED PARTS  ( COMMON FOR FRONT DOOR, REAR DOOR AND LID )</Description>
+    <Qty>70</Qty>
+    <ReleasedQty>70</ReleasedQty>
+    <WONo>N0233</WONo>
+    <WRNo>0531</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2834</Id>
+    <ItemCode>-</ItemCode>
+    <Description>STORAGE TROLLEY FOR AIR DRYING OF SEALED PARTS (TAIL GATE )</Description>
+    <Qty>7</Qty>
+    <ReleasedQty>7</ReleasedQty>
+    <WONo>N0233</WONo>
+    <WRNo>0531</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2835</Id>
+    <ItemCode>-</ItemCode>
+    <Description>SEALER APPLICATION TABLE</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>N0233</WONo>
+    <WRNo>0531</WRNo>
+  </Table1>
+</NewDataSet>

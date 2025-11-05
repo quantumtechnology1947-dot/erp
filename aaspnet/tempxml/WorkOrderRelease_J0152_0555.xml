@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2983</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Supply of Parts for Troll Ball Assembly which includes?, ?
+SS?304 ?machined parts?, ?Flocon make TC Clamps?, ?Gasket ?
+&amp; ?TC Blind?, ?Oring?</Description>
+    <Qty>151</Qty>
+    <ReleasedQty>151</ReleasedQty>
+    <WONo>J0152</WONo>
+    <WRNo>0555</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2984</Id>
+    <ItemCode>-</ItemCode>
+    <Description>3d &amp; 2d design of Troll Ball Assembly</Description>
+    <Qty>16</Qty>
+    <ReleasedQty>16</ReleasedQty>
+    <WONo>J0152</WONo>
+    <WRNo>0555</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2985</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Assembly of Troll Ball Assembly</Description>
+    <Qty>2</Qty>
+    <ReleasedQty>2</ReleasedQty>
+    <WONo>J0152</WONo>
+    <WRNo>0555</WRNo>
+  </Table1>
+</NewDataSet>

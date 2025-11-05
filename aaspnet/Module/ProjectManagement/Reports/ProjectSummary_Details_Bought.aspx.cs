@@ -1,0 +1,442 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.IO;
+
+public partial class Module_ProjectManagement_Reports_ProjectSummary_Details_Bought : System.Web.UI.Page
+{
+    clsFunctions fun = new clsFunctions();
+    string connStr = "";
+    SqlConnection con;
+    int CompId = 0;
+    int FinYearId = 0;
+    string sId = "";
+    string WONo = "";
+    string SwitchTo = string.Empty;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            connStr = fun.Connection();
+            con = new SqlConnection(connStr);
+            CompId = Convert.ToInt32(Session["compid"]);
+            FinYearId = Convert.ToInt32(Session["finyear"]);
+            sId = Session["username"].ToString();
+            if (!String.IsNullOrEmpty(Request.QueryString["WONo"]))
+            {
+                lblWo.Text = Request.QueryString["WONo"].ToString();
+                WONo = Request.QueryString["WONo"].ToString();
+            }
+            if (!String.IsNullOrEmpty(Request.QueryString["SwitchTo"]))
+            {
+                SwitchTo = Request.QueryString["SwitchTo"].ToString();
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    public void FillGrid_Creditors()
+    {
+        try
+        {
+
+            DataTable dt2 = new DataTable();
+            {
+                string str = string.Empty;
+                if (SwitchTo == "1")
+                {
+                    str = "select distinct(tblDG_Item_Master.ItemCode ),tblDG_Item_Master.PartNo,tblDG_Item_Master.CId, tblDG_Item_Master.Id,tblDG_Item_Master.StockQty,tblDG_Item_Master.ManfDesc,Unit_Master.Symbol As UOMBasic from tblDG_Item_Master inner join tblDG_BOM_Master on tblDG_Item_Master.Id=tblDG_BOM_Master.ItemId inner join Unit_Master on  tblDG_Item_Master.UOMBasic=Unit_Master.Id  And tblDG_Item_Master.CId !='8' And WONo='" + WONo + "' and  tblDG_Item_Master.CompId='" + CompId + "'And tblDG_Item_Master.FinYearId<='" + FinYearId + "' AND tblDG_BOM_Master.CId not in (Select PId from tblDG_BOM_Master where WONo='" + WONo + "'  and  tblDG_Item_Master.CompId='" + CompId + "' And tblDG_Item_Master.FinYearId<='" + FinYearId + "') Order By tblDG_Item_Master.Id  ASC";
+                }
+                SqlCommand cmdCustWo = new SqlCommand(str, con);
+                SqlDataReader daCustWo = cmdCustWo.ExecuteReader();
+                dt2.Columns.Add(new System.Data.DataColumn("Sn", typeof(Int32)));
+                dt2.Columns.Add(new System.Data.DataColumn("ItemCode", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("Description", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("UOM", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("BOMQty", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("Id", typeof(Int32)));
+                dt2.Columns.Add(new System.Data.DataColumn("WISQty", typeof(double)));
+                dt2.Columns.Add(new System.Data.DataColumn("StockQty", typeof(double)));
+                dt2.Columns.Add(new System.Data.DataColumn("PRNo", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("PRDate", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("PRQty", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("PONo", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("PODate", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("Supplier", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("Authorized", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("POQty", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GINNo", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GINDate", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GINQty", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GRRNo", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GRRDate", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GRRQty", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GQNNo", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GQNDate", typeof(string)));
+                dt2.Columns.Add(new System.Data.DataColumn("GQNQty", typeof(string)));
+                DataRow dr1;
+                int sn = 1;
+                while (daCustWo.Read())
+                {
+                    dr1 = dt2.NewRow();
+                    double liQty = 0;
+                    double TotWisQty = 0;
+                    double StockQty = 0;
+                    dr1[1] = daCustWo["ItemCode"].ToString();
+
+                    //string ic = "SELECT ItemCode From tblDG_Item_Master Where Itemcode Like 'H%'";
+                    //SqlCommand cmdic = new SqlCommand(ic, con);
+                    //SqlDataReader daic = cmdic.ExecuteReader();
+                    //dr1[1] = daic["ItemCode"].ToString();
+
+                    dr1[2] = daCustWo["ManfDesc"].ToString();
+                    dr1[3] = daCustWo["UOMBasic"].ToString();
+                    liQty = fun.AllComponentBOMQty(CompId, WONo, daCustWo["Id"].ToString(), FinYearId);
+                    dr1[4] = liQty;
+                    dr1[5] = Convert.ToInt32(daCustWo["Id"].ToString());
+                    dr1[0] = sn.ToString();
+                    sn++;
+                    TotWisQty = fun.CalWISQty(CompId.ToString(), WONo, daCustWo["Id"].ToString());
+                    StockQty = Convert.ToDouble(daCustWo["StockQty"].ToString());
+                    dr1[6] = TotWisQty;
+                    dr1[7] = StockQty;
+                    string sqlPR = "SELECT tblMM_PR_Details.Id As PRId,tblMM_PR_Master.PRNo, REPLACE(CONVERT(varchar, CONVERT(datetime, SUBSTRING(SysDate, CHARINDEX('-',SysDate) + 1, 2) + '-' + LEFT(SysDate,CHARINDEX('-', SysDate) - 1) + '-' + RIGHT(SysDate, CHARINDEX('-', REVERSE(SysDate)) - 1)), 103), '/', '-') As PRDate , tblMM_PR_Details.Qty As PRQty   FROM tblMM_PR_Master INNER JOIN tblMM_PR_Details ON tblMM_PR_Master.Id = tblMM_PR_Details.MId And tblMM_PR_Master.WONo='" + WONo + "' And tblMM_PR_Details.ItemId='" + daCustWo["Id"].ToString() + "' ";
+                    SqlCommand cmdPR = new SqlCommand(sqlPR, con);
+                    SqlDataReader daPR = cmdPR.ExecuteReader();
+                    string PRNo = string.Empty;
+                    string PRDate = string.Empty;
+                    string PRQty = string.Empty;
+                    string PONo = string.Empty;
+                    string PODate = string.Empty;
+                    string Supplier = string.Empty;
+                    string Authorized = string.Empty;
+                    string POQty = string.Empty;
+                    string GINNo = string.Empty;
+                    string GINDate = string.Empty;
+                    string GINQty = string.Empty;
+                    string GRRNo = string.Empty;
+                    string GRRDate = string.Empty;
+                    string GRRQty = string.Empty;
+                    string GQNNo = string.Empty;
+                    string GQNDate = string.Empty;
+                    string GQNQty = string.Empty;
+                    while (daPR.Read())
+                    {
+                        PRNo = PRNo + "<br>" + daPR["PRNo"].ToString();
+                        PRDate = PRDate + "<br>" + daPR["PRDate"].ToString();
+                        PRQty = PRQty + "<br>" + daPR["PRQty"].ToString();
+                        dr1[8] = PRNo;
+                        dr1[9] = PRDate;
+                        dr1[10] = PRQty;
+                        string sqlPo = "SELECT tblMM_PO_Details.Id, tblMM_PO_Master.PONo, tblMM_PO_Master.SysDate, tblMM_PO_Master.SupplierId, tblMM_PO_Master.Authorize,tblMM_PO_Details.Qty FROM tblMM_PO_Master INNER JOIN tblMM_PO_Details ON tblMM_PO_Master.Id = tblMM_PO_Details.MId And tblMM_PO_Details.PRId='" + daPR["PRId"].ToString() + "' ";
+                        SqlCommand cmdPo = new SqlCommand(sqlPo, con);
+                        SqlDataReader daPo = cmdPo.ExecuteReader();
+                        while (daPo.Read())
+                        {
+                            string cmdStr = fun.select("SupplierName+'['+SupplierId+']' As SupplierName ", "tblMM_Supplier_master", "CompId='" + CompId + "' And SupplierId='" + daPo["SupplierId"].ToString() + "'");
+                            SqlDataAdapter da123 = new SqlDataAdapter(cmdStr, con);
+                            DataSet dsSup = new DataSet();
+                            da123.Fill(dsSup, "tblMM_Supplier_master");
+                            if (daPo["Authorize"].ToString() == "1")
+                            {
+                                Authorized = Authorized + "<br>" + "Yes";
+                            }
+                            else
+                            {
+                                Authorized = Authorized + "<br>" + "No";
+                            }
+
+                            PONo = PONo + "<br>" + daPo["PONo"].ToString();
+                            PODate = PODate + "<br>" + fun.FromDateDMY(daPo["SysDate"].ToString());
+                            Supplier = Supplier + "<br>" + dsSup.Tables[0].Rows[0]["SupplierName"].ToString();
+                            POQty = POQty + "<br>" + daPo["Qty"].ToString();
+                            dr1[11] = PONo;
+                            dr1[12] = PODate;
+                            dr1[13] = Supplier;
+                            dr1[14] = Authorized;
+                            dr1[15] = POQty;
+                            string sqlGIN = "SELECT tblInv_Inward_Details.ReceivedQty As GINQty , tblInv_Inward_Master.GINNo,REPLACE(CONVERT(varchar, CONVERT(datetime, SUBSTRING(SysDate, CHARINDEX('-',SysDate) + 1, 2) + '-' + LEFT(SysDate,CHARINDEX('-', SysDate) - 1) + '-' + RIGHT(SysDate, CHARINDEX('-', REVERSE(SysDate)) - 1)), 103), '/', '-') As GINDate, tblInv_Inward_Master.Id,tblInv_Inward_Details.POId FROM tblInv_Inward_Master INNER JOIN tblInv_Inward_Details ON tblInv_Inward_Master.Id = tblInv_Inward_Details.GINId And tblInv_Inward_Details.POId='" + daPo["Id"].ToString() + "' And tblInv_Inward_Master.PONo='" + daPo["PONo"].ToString() + "' and tblInv_Inward_Master.CompId='" + CompId + "'";
+                            SqlCommand cmdGIN = new SqlCommand(sqlGIN, con);
+                            SqlDataReader daGIN = cmdGIN.ExecuteReader();
+                            while (daGIN.Read())
+                            {
+
+                                GINNo = GINNo + "<br>" + daGIN["GINNo"].ToString();
+                                GINDate = GINDate + "<br>" + daGIN["GINDate"].ToString();
+                                GINQty = GINQty + "<br>" + daGIN["GINQty"].ToString();
+                                dr1[16] = GINNo;
+                                dr1[17] = GINDate;
+                                dr1[18] = GINQty;
+                                string sqlGRR = "SELECT tblinv_MaterialReceived_Details.ReceivedQty As GRRQty ,tblinv_MaterialReceived_Master.GRRNo,REPLACE(CONVERT(varchar, CONVERT(datetime, SUBSTRING(SysDate, CHARINDEX('-',SysDate) + 1, 2) + '-' + LEFT(SysDate,CHARINDEX('-', SysDate) - 1) + '-' + RIGHT(SysDate, CHARINDEX('-', REVERSE(SysDate)) - 1)), 103), '/', '-') As GRRDate ,tblinv_MaterialReceived_Master.Id,tblinv_MaterialReceived_Details.Id As DId FROM tblinv_MaterialReceived_Master INNER JOIN tblinv_MaterialReceived_Details ON tblinv_MaterialReceived_Master.Id = tblinv_MaterialReceived_Details.MId and tblinv_MaterialReceived_Master.CompId='" + CompId + "'And tblinv_MaterialReceived_Master.GINId='" + daGIN["Id"].ToString() + "' And tblinv_MaterialReceived_Details.POId='" + daGIN["POId"].ToString() + "' ";
+                                SqlCommand cmdGRR = new SqlCommand(sqlGRR, con);
+                                SqlDataReader daGRR = cmdGRR.ExecuteReader();
+                                while (daGRR.Read())
+                                {
+
+                                    GRRNo = GRRNo + "<br>" + daGRR["GRRNo"].ToString();
+                                    GRRDate = GRRDate + "<br>" + daGRR["GRRDate"].ToString();
+                                    GRRQty = GRRQty + "<br>" + daGRR["GRRQty"].ToString();
+                                    dr1[19] = GRRNo;
+                                    dr1[20] = GRRDate;
+                                    dr1[21] = GRRQty;
+
+                                    string sqlGQN = "SELECT tblQc_MaterialQuality_Master.Id, REPLACE(CONVERT(varchar, CONVERT(datetime, SUBSTRING(SysDate, CHARINDEX('-',SysDate) + 1, 2) + '-' + LEFT(SysDate,CHARINDEX('-', SysDate) - 1) + '-' + RIGHT(SysDate, CHARINDEX('-', REVERSE(SysDate)) - 1)), 103), '/', '-') As GQNDate, tblQc_MaterialQuality_Master.GQNNo,tblQc_MaterialQuality_Details.AcceptedQty As GQNQty FROM tblQc_MaterialQuality_Master INNER JOIN tblQc_MaterialQuality_Details ON tblQc_MaterialQuality_Master.Id = tblQc_MaterialQuality_Details.MId and tblQc_MaterialQuality_Master.CompId='" + CompId + "'And tblQc_MaterialQuality_Master.GRRId='" + daGRR["Id"].ToString() + "'And tblQc_MaterialQuality_Details.GRRId='" + daGRR["DId"].ToString() + "'";
+                                    SqlCommand cmdGQN = new SqlCommand(sqlGQN, con);
+                                    SqlDataReader daGQN = cmdGQN.ExecuteReader();
+                                    while (daGQN.Read())
+                                    {
+                                        GQNNo = GQNNo + "<br>" + daGQN["GQNNo"].ToString();
+                                        GQNDate = GQNDate + "<br>" + daGQN["GQNDate"].ToString();
+                                        GQNQty = GQNQty + "<br>" + daGQN["GQNQty"].ToString();
+                                        dr1[22] = GQNNo;
+                                        dr1[23] = GQNDate;
+                                        dr1[24] = GQNQty;
+                                    }
+
+                                }
+
+                            }
+
+                        }
+                    }
+
+                    dt2.Rows.Add(dr1);
+                    dt2.AcceptChanges();
+                }
+
+                dt2.Columns.Remove(dt2.Columns["Id"]);
+                dt2.AcceptChanges();
+                ViewState["dtList"] = dt2;
+            }
+
+        }
+        catch (Exception ex)
+        { }
+    }
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ProjectSummary.aspx?ModId=7");
+    }
+    protected void btnExport_Click(object sender, EventArgs e)
+    {
+
+        try
+        {
+            int k = 0;
+            foreach (ListItem item in CheckBoxList1.Items)
+            {
+                if (item.Value != "Sr.No")
+                {
+                    if (item.Selected == true)
+                    {
+                        k++;
+                    }
+                }
+            }
+            DataTable dt1 = new DataTable();
+            if (k > 0)
+            {
+                con.Open();
+                this.FillGrid_Creditors();
+                con.Close();
+                dt1 = (DataTable)ViewState["dtList"];
+
+                foreach (ListItem item in CheckBoxList1.Items)
+                {
+                    if (item.Selected == false)
+                    {
+                        if (item.Value == "Sr.No")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["Sr.No"]);
+                        }
+                        if (item.Value == "0")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["ItemCode"]);
+                        }
+                        if (item.Value == "1")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["Description"]);
+                        }
+                        if (item.Value == "2")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["UOM"]);
+                        }
+                        if (item.Value == "3")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["BOMQty"]);
+                        }
+
+                        if (item.Value == "4")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["WISQty"]);
+                        }
+                        if (item.Value == "5")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["StockQty"]);
+                        }
+
+                        if (item.Value == "10")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["PRNo"]);
+                        }
+                        if (item.Value == "11")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["PRDate"]);
+                        }
+                        if (item.Value == "12")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["PRQty"]);
+                        }
+
+                        if (item.Value == "13")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["PONo"]);
+                        }
+
+                        if (item.Value == "14")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["PODate"]);
+                        }
+                        if (item.Value == "15")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["Supplier"]);
+                        }
+                        if (item.Value == "16")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["Authorized"]);
+                        }
+
+                        if (item.Value == "17")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["POQty"]);
+                        }
+                        if (item.Value == "18")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GINNo"]);
+                        }
+                        if (item.Value == "19")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GINDate"]);
+                        }
+
+                        if (item.Value == "20")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GINQty"]);
+                        }
+                        if (item.Value == "21")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GRRNo"]);
+                        }
+                        if (item.Value == "22")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GRRDate"]);
+                        }
+
+                        if (item.Value == "23")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GRRQty"]);
+                        }
+
+                        if (item.Value == "24")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GQNNo"]);
+                        }
+                        if (item.Value == "25")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GQNDate"]);
+                        }
+                        if (item.Value == "26")
+                        {
+                            dt1.Columns.Remove(dt1.Columns["GQNQty"]);
+                        }
+                    }
+                }
+            }
+            if (dt1 == null)
+            {
+                throw new Exception("No Records to Export");
+            }
+            string Path = "D:\\ImportExcelFromDatabase\\WONo" + WONo + "_" + DateTime.Now.Day.ToString() + "_" + DateTime.Now.Month.ToString() + ".xls";
+            FileInfo FI = new FileInfo(Path);
+            StringWriter stringWriter = new StringWriter();
+            HtmlTextWriter htmlWrite = new HtmlTextWriter(stringWriter);
+            System.Web.UI.WebControls.DataGrid DataGrd = new System.Web.UI.WebControls.DataGrid();
+            DataGrd.DataSource = dt1;
+            DataGrd.DataBind();
+            DataGrd.RenderControl(htmlWrite);
+            string directory = Path.Substring(0, Path.LastIndexOf("\\"));
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+            System.IO.StreamWriter vw = new System.IO.StreamWriter(Path, true);
+            stringWriter.ToString().Normalize();
+            vw.Write(stringWriter.ToString());
+            vw.Flush();
+            vw.Close();
+            WriteAttachment(FI.Name, "application/vnd.ms-excel", stringWriter.ToString());
+        }
+        catch (Exception ex)
+        {
+            string mystring = string.Empty;
+            mystring = "No Records to Export.";
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + mystring + "');", true);
+        }
+
+
+    }
+    public static void WriteAttachment(string FileName, string FileType, string content)
+    {
+        try
+        {
+            HttpResponse Response = System.Web.HttpContext.Current.Response;
+            Response.ClearHeaders();
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + FileName);
+            Response.ContentType = FileType;
+            Response.Write(content);
+            Response.End();
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+    protected void CheckAll_CheckedChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            if (CheckAll.Checked == true)
+            {
+                foreach (ListItem item in CheckBoxList1.Items)
+                {
+                    item.Selected = true;
+                }
+            }
+            else
+            {
+                foreach (ListItem item in CheckBoxList1.Items)
+                {
+                    if (item.Value != "Sr.No")
+                    {
+                        item.Selected = false;
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+        }
+    }
+}

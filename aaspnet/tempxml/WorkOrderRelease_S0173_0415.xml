@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2445</Id>
+    <ItemCode>5195678</ItemCode>
+    <Description>RAIL I-BEAM CLAMP</Description>
+    <Qty>65</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>S0173</WONo>
+    <WRNo>0415</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2446</Id>
+    <ItemCode>5195677</ItemCode>
+    <Description>LONG RAIL JOINT COUPLER</Description>
+    <Qty>13</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>S0173</WONo>
+    <WRNo>0415</WRNo>
+  </Table1>
+</NewDataSet>

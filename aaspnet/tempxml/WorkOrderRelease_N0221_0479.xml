@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2683</Id>
+    <ItemCode>1</ItemCode>
+    <Description>FES BS6 Spot Manual Fixtures</Description>
+    <Qty>26</Qty>
+    <ReleasedQty>26</ReleasedQty>
+    <WONo>N0221</WONo>
+    <WRNo>0479</WRNo>
+  </Table1>
+</NewDataSet>

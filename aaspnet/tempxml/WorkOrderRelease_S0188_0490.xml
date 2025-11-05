@@ -1,0 +1,102 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2716</Id>
+    <ItemCode>1</ItemCode>
+    <Description>Gun Rail Tube 63x63x5mm</Description>
+    <Qty>300</Qty>
+    <ReleasedQty>300</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2717</Id>
+    <ItemCode>99999-01-00</ItemCode>
+    <Description>Assy of Cross Trolley C-63</Description>
+    <Qty>100</Qty>
+    <ReleasedQty>100</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2718</Id>
+    <ItemCode>99999-03-00</ItemCode>
+    <Description>Assly of Load Trolley C-63</Description>
+    <Qty>50</Qty>
+    <ReleasedQty>50</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2719</Id>
+    <ItemCode>99999-06-00</ItemCode>
+    <Description>Assly of Tool Trolley</Description>
+    <Qty>50</Qty>
+    <ReleasedQty>50</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2720</Id>
+    <ItemCode>2</ItemCode>
+    <Description>Assy of Hoist Trolley C-63</Description>
+    <Qty>10</Qty>
+    <ReleasedQty>10</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2721</Id>
+    <ItemCode>99999-09-00</ItemCode>
+    <Description>Cable Support Assembly</Description>
+    <Qty>50</Qty>
+    <ReleasedQty>50</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2722</Id>
+    <ItemCode>99999-02-00</ItemCode>
+    <Description>Assly Cross Rail Support</Description>
+    <Qty>100</Qty>
+    <ReleasedQty>100</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2723</Id>
+    <ItemCode>99999-04-00</ItemCode>
+    <Description>Assly of Channel Support C-75 100L</Description>
+    <Qty>200</Qty>
+    <ReleasedQty>200</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2724</Id>
+    <ItemCode>99999-05-00</ItemCode>
+    <Description>Assly of Joint Coupler</Description>
+    <Qty>75</Qty>
+    <ReleasedQty>75</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2725</Id>
+    <ItemCode>99999-07-00</ItemCode>
+    <Description>Assly Beam Support</Description>
+    <Qty>200</Qty>
+    <ReleasedQty>200</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2726</Id>
+    <ItemCode>99999-08-00</ItemCode>
+    <Description>Assly of End Rubber Stopper</Description>
+    <Qty>100</Qty>
+    <ReleasedQty>100</ReleasedQty>
+    <WONo>S0188</WONo>
+    <WRNo>0490</WRNo>
+  </Table1>
+</NewDataSet>

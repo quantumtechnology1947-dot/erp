@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2851</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Tail Gate Outer upper -6JM827105</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>J0141</WONo>
+    <WRNo>0535</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2852</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Tail Gate Outer Upper -6JR827105</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>J0141</WONo>
+    <WRNo>0535</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2853</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Tail Gate Outer Upper - 5JL827105</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>J0141</WONo>
+    <WRNo>0535</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2854</Id>
+    <ItemCode>-</ItemCode>
+    <Description>Tail Gate Outer Upper - 5JN827105</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>J0141</WONo>
+    <WRNo>0535</WRNo>
+  </Table1>
+</NewDataSet>

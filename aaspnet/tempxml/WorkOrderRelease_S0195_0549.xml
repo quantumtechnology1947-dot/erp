@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>2901</Id>
+    <ItemCode>8800080</ItemCode>
+    <Description>I-beam 200 ISMB</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>S0195</WONo>
+    <WRNo>0549</WRNo>
+  </Table1>
+  <Table1>
+    <Id>2902</Id>
+    <ItemCode>8808630</ItemCode>
+    <Description>Cross tacker rail</Description>
+    <Qty>1</Qty>
+    <ReleasedQty>1</ReleasedQty>
+    <WONo>S0195</WONo>
+    <WRNo>0549</WRNo>
+  </Table1>
+</NewDataSet>

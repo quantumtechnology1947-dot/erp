@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>1289</Id>
+    <ItemCode>10</ItemCode>
+    <Description>Long Rails C63</Description>
+    <IssuedQty>440</IssuedQty>
+    <DispatchQty>375</DispatchQty>
+    <WONo>S0086</WONo>
+    <DANo>0327</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1290</Id>
+    <ItemCode>20</ItemCode>
+    <Description>Cross Rails C63 (1.5Mtr X 58Nos. = 87Mtr)</Description>
+    <IssuedQty>108</IssuedQty>
+    <DispatchQty>93</DispatchQty>
+    <WONo>S0086</WONo>
+    <DANo>0327</DANo>
+    <CompId>1</CompId>
+  </Table1>
+  <Table1>
+    <Id>1291</Id>
+    <ItemCode>30</ItemCode>
+    <Description>Trolley Set</Description>
+    <IssuedQty>72</IssuedQty>
+    <DispatchQty>62</DispatchQty>
+    <WONo>S0086</WONo>
+    <DANo>0327</DANo>
+    <CompId>1</CompId>
+  </Table1>
+</NewDataSet>

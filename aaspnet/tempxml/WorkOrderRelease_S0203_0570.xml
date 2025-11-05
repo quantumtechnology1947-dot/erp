@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <Id>3068</Id>
+    <ItemCode>-</ItemCode>
+    <Description>LONG RAIL 4MTR*19NOS</Description>
+    <Qty>76</Qty>
+    <ReleasedQty>76</ReleasedQty>
+    <WONo>S0203</WONo>
+    <WRNo>0570</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3069</Id>
+    <ItemCode>-</ItemCode>
+    <Description>LONG RAIL 4MTR*15 NOS</Description>
+    <Qty>60</Qty>
+    <ReleasedQty>60</ReleasedQty>
+    <WONo>S0203</WONo>
+    <WRNo>0570</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3070</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 2.5MTR*9NOS</Description>
+    <Qty>22.5</Qty>
+    <ReleasedQty>22.5</ReleasedQty>
+    <WONo>S0203</WONo>
+    <WRNo>0570</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3071</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 2.5*5NOS</Description>
+    <Qty>12.5</Qty>
+    <ReleasedQty>12.5</ReleasedQty>
+    <WONo>S0203</WONo>
+    <WRNo>0570</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3072</Id>
+    <ItemCode>-</ItemCode>
+    <Description>CROSS RAIL 2MTR*5NOS</Description>
+    <Qty>10</Qty>
+    <ReleasedQty>10</ReleasedQty>
+    <WONo>S0203</WONo>
+    <WRNo>0570</WRNo>
+  </Table1>
+  <Table1>
+    <Id>3073</Id>
+    <ItemCode>-</ItemCode>
+    <Description>TROLLEY SET( Cross trolley-2nos,load trolley-1 nos,tool trolley-1 nos)</Description>
+    <Qty>19</Qty>
+    <ReleasedQty>19</ReleasedQty>
+    <WONo>S0203</WONo>
+    <WRNo>0570</WRNo>
+  </Table1>
+</NewDataSet>
