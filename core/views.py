@@ -13,11 +13,14 @@ def login_view(request):
 
         if user is not None:
             login(request, user)
-            return redirect('dashboard')
+            # For HTMX, use HX-Redirect header
+            response = HttpResponse(status=200)
+            response['HX-Redirect'] = '/dashboard/'
+            return response
         else:
             return HttpResponse(
                 '<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">'
-                'Invalid username or password'
+                '<i class="fas fa-exclamation-circle mr-2"></i>Invalid username or password'
                 '</div>'
             )
 

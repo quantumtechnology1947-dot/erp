@@ -26,6 +26,7 @@
                   hx-post="/login/"
                   hx-target="#login-result"
                   hx-swap="innerHTML">
+                {% csrf_token %}
 
                 <!-- Messages -->
                 <div id="login-result"></div>
