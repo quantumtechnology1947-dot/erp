@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Countries{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-gray-900">Countries</h1>
+        {% if perms.sysconfig.add_country %}
+        <a href="{% url 'sysconfig:country-create' %}" class="btn btn-primary">Add Country</a>
+        {% endif %}
+    </div>
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr><th>Name</th><th>Code</th><th>Currency</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                {% for country in countries %}
+                <tr>
+                    <td>{{ country.name }}</td>
+                    <td>{{ country.code }}</td>
+                    <td>{{ country.currency_symbol }} {{ country.currency_code }}</td>
+                    <td>
+                        {% if perms.sysconfig.change_country %}
+                        <a href="{% url 'sysconfig:country-update' country.pk %}" class="text-blue-600">Edit</a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="4" class="text-center py-8">No countries found</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

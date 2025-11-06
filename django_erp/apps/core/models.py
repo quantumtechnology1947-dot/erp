@@ -3,6 +3,7 @@ Core abstract models for ERP system.
 All app models should inherit from these base models for consistency.
 """
 
+from django.conf import settings
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
@@ -45,7 +46,7 @@ class SoftDeleteModel(models.Model):
         help_text='Date and time when the record was deleted'
     )
     deleted_by = models.ForeignKey(
-        'auth.User',
+        settings.AUTH_USER_MODEL,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -93,7 +94,7 @@ class AuditMixin(models.Model):
     Abstract mixin that tracks who created and last updated a record.
     """
     created_by = models.ForeignKey(
-        'auth.User',
+        settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
@@ -101,7 +102,7 @@ class AuditMixin(models.Model):
         help_text='User who created this record'
     )
     updated_by = models.ForeignKey(
-        'auth.User',
+        settings.AUTH_USER_MODEL,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
@@ -137,7 +138,7 @@ class ApprovalWorkflowModel(models.Model):
 
     # Check level
     checked_by = models.ForeignKey(
-        'auth.User',
+        settings.AUTH_USER_MODEL,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -156,7 +157,7 @@ class ApprovalWorkflowModel(models.Model):
 
     # Approve level
     approved_by = models.ForeignKey(
-        'auth.User',
+        settings.AUTH_USER_MODEL,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -175,7 +176,7 @@ class ApprovalWorkflowModel(models.Model):
 
     # Authorize level
     authorized_by = models.ForeignKey(
-        'auth.User',
+        settings.AUTH_USER_MODEL,
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -264,3 +265,7 @@ class AllObjectsManager(models.Manager):
     """
     def get_queryset(self):
         return super().get_queryset()
+
+
+# Import auth models to make User and UserProfile available
+from .auth_models import User, UserProfile  # noqa: F401, E402

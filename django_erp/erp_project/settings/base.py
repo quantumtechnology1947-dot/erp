@@ -47,9 +47,13 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'apps.core',
+    'apps.sysconfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+
+# Custom User Model
+AUTH_USER_MODEL = 'core.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

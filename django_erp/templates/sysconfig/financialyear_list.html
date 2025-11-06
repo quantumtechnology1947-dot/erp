@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Financial Years{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Financial Years</h1>
+            <p class="mt-1 text-sm text-gray-600">Manage financial year periods</p>
+        </div>
+        {% if perms.sysconfig.add_financialyear %}
+        <a href="{% url 'sysconfig:financialyear-create' %}" class="btn btn-primary">Add Financial Year</a>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <div class="overflow-x-auto">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Company</th>
+                        <th>Period</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for fy in financial_years %}
+                    <tr>
+                        <td class="font-medium">{{ fy.year }}</td>
+                        <td>{{ fy.company.name }}</td>
+                        <td class="text-sm">{{ fy.start_date|date:"d M Y" }} - {{ fy.end_date|date:"d M Y" }}</td>
+                        <td>
+                            {% if fy.is_active %}
+                                <span class="badge bg-green-100 text-green-800">Active</span>
+                            {% endif %}
+                            {% if fy.is_locked %}
+                                <span class="badge bg-red-100 text-red-800">Locked</span>
+                            {% endif %}
+                        </td>
+                        <td class="space-x-2">
+                            {% if perms.sysconfig.change_financialyear %}
+                            <a href="{% url 'sysconfig:financialyear-update' fy.pk %}" class="text-blue-600 hover:text-blue-900">Edit</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="text-center py-8 text-gray-500">No financial years found</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

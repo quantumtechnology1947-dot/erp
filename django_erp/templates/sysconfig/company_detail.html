@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ company.name }}{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto space-y-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">{{ company.name }}</h1>
+            <p class="mt-1 text-sm text-gray-600">Company Code: {{ company.code }}</p>
+        </div>
+        <div class="flex space-x-3">
+            <a href="{% url 'sysconfig:company-list' %}" class="btn">Back to List</a>
+            {% if perms.sysconfig.change_company %}
+            <a href="{% url 'sysconfig:company-update' company.pk %}" class="btn btn-primary">Edit</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Company Details -->
+    <div class="card space-y-6">
+        <div class="grid grid-cols-2 gap-6">
+            <div>
+                <h3 class="text-sm font-medium text-gray-500">Company Name</h3>
+                <p class="mt-1 text-sm text-gray-900">{{ company.name }}</p>
+            </div>
+            <div>
+                <h3 class="text-sm font-medium text-gray-500">Code</h3>
+                <p class="mt-1 text-sm text-gray-900">{{ company.code }}</p>
+            </div>
+            <div>
+                <h3 class="text-sm font-medium text-gray-500">Address</h3>
+                <p class="mt-1 text-sm text-gray-900">{{ company.address }}</p>
+                <p class="text-sm text-gray-900">{{ company.city.name }}, {{ company.city.state.name }}</p>
+                <p class="text-sm text-gray-900">{{ company.pincode }}</p>
+            </div>
+            <div>
+                <h3 class="text-sm font-medium text-gray-500">Contact</h3>
+                <p class="mt-1 text-sm text-gray-900">{{ company.phone }}</p>
+                <p class="text-sm text-gray-900">{{ company.email }}</p>
+                {% if company.website %}
+                <p class="text-sm text-blue-600"><a href="{{ company.website }}" target="_blank">{{ company.website }}</a></p>
+                {% endif %}
+            </div>
+            <div>
+                <h3 class="text-sm font-medium text-gray-500">GST Number</h3>
+                <p class="mt-1 text-sm text-gray-900 font-mono">{{ company.gst_number }}</p>
+            </div>
+            <div>
+                <h3 class="text-sm font-medium text-gray-500">PAN Number</h3>
+                <p class="mt-1 text-sm text-gray-900 font-mono">{{ company.pan_number }}</p>
+            </div>
+            <div>
+                <h3 class="text-sm font-medium text-gray-500">Status</h3>
+                <p class="mt-1">
+                    {% if company.is_active %}
+                        <span class="badge bg-green-100 text-green-800">Active</span>
+                    {% else %}
+                        <span class="badge bg-gray-100 text-gray-800">Inactive</span>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

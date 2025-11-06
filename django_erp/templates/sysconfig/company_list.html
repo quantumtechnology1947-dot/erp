@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Companies{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Companies</h1>
+            <p class="mt-1 text-sm text-gray-600">Manage company information and settings</p>
+        </div>
+        {% if perms.sysconfig.add_company %}
+        <a href="{% url 'sysconfig:company-create' %}" class="btn btn-primary">
+            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+            </svg>
+            Add Company
+        </a>
+        {% endif %}
+    </div>
+
+    <!-- Search -->
+    <div class="card">
+        <form method="get" class="flex gap-4" hx-get="{% url 'sysconfig:company-list' %}" hx-target="#company-table" hx-trigger="keyup changed delay:500ms from:input[name='search']">
+            <div class="flex-1">
+                <input type="text"
+                       name="search"
+                       placeholder="Search companies..."
+                       value="{{ request.GET.search }}"
+                       class="form-input">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <!-- Table -->
+    <div id="company-table" class="card">
+        {% include "sysconfig/partials/company_table.html" %}
+    </div>
+</div>
+{% endblock %}

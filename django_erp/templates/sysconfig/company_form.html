@@ -1,0 +1,199 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{% if object %}Edit Company{% else %}Add Company{% endif %}{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto space-y-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">
+                {% if object %}Edit Company{% else %}Add Company{% endif %}
+            </h1>
+            <p class="mt-1 text-sm text-gray-600">
+                {% if object %}Update company information{% else %}Create a new company in the system{% endif %}
+            </p>
+        </div>
+        <a href="{% url 'sysconfig:company-list' %}" class="btn">
+            <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to List
+        </a>
+    </div>
+
+    <!-- Form -->
+    <div class="card">
+        <form method="post" enctype="multipart/form-data" class="space-y-6">
+            {% csrf_token %}
+
+            {% if form.errors %}
+            <div class="rounded-md bg-red-50 p-4">
+                <div class="flex">
+                    <div class="ml-3">
+                        <h3 class="text-sm font-medium text-red-800">
+                            There were errors with your submission:
+                        </h3>
+                        <div class="mt-2 text-sm text-red-700">
+                            <ul class="list-disc pl-5 space-y-1">
+                                {% for field, errors in form.errors.items %}
+                                    {% for error in errors %}
+                                        <li>{{ field }}: {{ error }}</li>
+                                    {% endfor %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Basic Information -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-medium text-gray-900">Basic Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="{{ form.name.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Company Name <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.name }}
+                        {% if form.name.help_text %}
+                        <p class="mt-1 text-sm text-gray-500">{{ form.name.help_text }}</p>
+                        {% endif %}
+                    </div>
+                    <div>
+                        <label for="{{ form.code.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Company Code <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.code }}
+                        {% if form.code.help_text %}
+                        <p class="mt-1 text-sm text-gray-500">{{ form.code.help_text }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Address Information -->
+            <div class="space-y-4 pt-6 border-t">
+                <h3 class="text-lg font-medium text-gray-900">Address Information</h3>
+                <div>
+                    <label for="{{ form.address.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                        Address <span class="text-red-500">*</span>
+                    </label>
+                    {{ form.address }}
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="{{ form.city.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            City <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.city }}
+                    </div>
+                    <div>
+                        <label for="{{ form.pincode.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Pincode <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.pincode }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-4 pt-6 border-t">
+                <h3 class="text-lg font-medium text-gray-900">Contact Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="{{ form.phone.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Phone <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.phone }}
+                    </div>
+                    <div>
+                        <label for="{{ form.email.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Email <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.email }}
+                    </div>
+                    <div>
+                        <label for="{{ form.website.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Website
+                        </label>
+                        {{ form.website }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tax Information -->
+            <div class="space-y-4 pt-6 border-t">
+                <h3 class="text-lg font-medium text-gray-900">Tax & Registration Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="{{ form.gst_number.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            GST Number <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.gst_number }}
+                    </div>
+                    <div>
+                        <label for="{{ form.pan_number.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            PAN Number <span class="text-red-500">*</span>
+                        </label>
+                        {{ form.pan_number }}
+                    </div>
+                    <div>
+                        <label for="{{ form.tan_number.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            TAN Number
+                        </label>
+                        {{ form.tan_number }}
+                    </div>
+                    <div>
+                        <label for="{{ form.cin_number.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            CIN Number
+                        </label>
+                        {{ form.cin_number }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="space-y-4 pt-6 border-t">
+                <h3 class="text-lg font-medium text-gray-900">Additional Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="{{ form.established_date.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Established Date
+                        </label>
+                        {{ form.established_date }}
+                    </div>
+                    <div>
+                        <label for="{{ form.industry.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Industry
+                        </label>
+                        {{ form.industry }}
+                    </div>
+                    <div>
+                        <label for="{{ form.logo.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                            Company Logo
+                        </label>
+                        {{ form.logo }}
+                    </div>
+                    <div class="flex items-center">
+                        <label class="inline-flex items-center">
+                            {{ form.is_active }}
+                            <span class="ml-2 text-sm font-medium text-gray-700">Active</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex justify-end space-x-3 pt-6 border-t">
+                <a href="{% url 'sysconfig:company-list' %}" class="btn">Cancel</a>
+                <button type="submit" class="btn btn-primary">
+                    {% if object %}Update Company{% else %}Create Company{% endif %}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

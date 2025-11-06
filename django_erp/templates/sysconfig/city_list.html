@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Cities{% endblock %}
+
+{% block content %}
+<div class="space-y-6">
+    <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Cities</h1>
+        {% if perms.sysconfig.add_city %}
+        <a href="{% url 'sysconfig:city-create' %}" class="btn btn-primary">Add City</a>
+        {% endif %}
+    </div>
+    <div class="card">
+        <table class="table">
+            <thead>
+                <tr><th>Name</th><th>State</th><th>Pincode</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                {% for city in cities %}
+                <tr>
+                    <td>{{ city.name }}</td>
+                    <td>{{ city.state.name }}, {{ city.state.country.name }}</td>
+                    <td>{{ city.pincode }}</td>
+                    <td>
+                        {% if perms.sysconfig.change_city %}
+                        <a href="{% url 'sysconfig:city-update' city.pk %}" class="text-blue-600">Edit</a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="4" class="text-center py-8">No cities found</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
