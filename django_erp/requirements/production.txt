@@ -1,0 +1,13 @@
+-r base.txt
+
+# Production monitoring
+sentry-sdk==1.40.0
+
+# Performance
+django-cachalot==2.6.1
+
+# Security
+django-csp==3.8
+
+# Static files
+whitenoise==6.6.0
