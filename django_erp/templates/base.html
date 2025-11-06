@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}ERP System{% endblock %}</title>
+
+    <!-- Tailwind CSS -->
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <!-- HTMX Extensions -->
+    <script src="https://unpkg.com/htmx.org@1.9.10/dist/ext/debug.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded">
+        Skip to main content
+    </a>
+
+    {% if user.is_authenticated %}
+        <!-- Navigation -->
+        {% include 'components/navbar.html' %}
+
+        <!-- Sidebar (for desktop) -->
+        {% include 'components/sidebar.html' %}
+    {% endif %}
+
+    <!-- Main Content Area -->
+    <div {% if user.is_authenticated %}class="lg:ml-64 min-h-screen"{% endif %}>
+        {% if user.is_authenticated %}
+            <!-- Page Header -->
+            <header class="bg-white shadow-sm">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h1 class="text-2xl font-bold text-gray-900">
+                                {% block page_title %}Dashboard{% endblock %}
+                            </h1>
+                            {% block breadcrumbs %}{% endblock %}
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            {% block page_actions %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </header>
+        {% endif %}
+
+        <!-- Messages -->
+        {% if messages %}
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                {% include 'components/messages.html' %}
+            </div>
+        {% endif %}
+
+        <!-- Main Content -->
+        <main id="main-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Footer -->
+    {% if user.is_authenticated %}
+        {% include 'components/footer.html' %}
+    {% endif %}
+
+    <!-- Modals Container -->
+    <div id="modal-container"></div>
+
+    <!-- Notifications Container (for toast notifications) -->
+    <div id="notifications-container" class="fixed top-4 right-4 z-50 space-y-2">
+        <!-- Dynamic notifications will be inserted here -->
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-6 flex items-center space-x-3">
+            <div class="spinner border-primary-600"></div>
+            <span class="text-gray-700">Loading...</span>
+        </div>
+    </div>
+
+    <!-- HTMX Configuration -->
+    <script>
+        document.body.addEventListener('htmx:configRequest', function(event) {
+            // Add CSRF token to all HTMX requests
+            event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+        });
+
+        // Show loading overlay on HTMX requests
+        document.body.addEventListener('htmx:beforeRequest', function(event) {
+            document.getElementById('loading-overlay').classList.remove('hidden');
+        });
+
+        document.body.addEventListener('htmx:afterRequest', function(event) {
+            document.getElementById('loading-overlay').classList.add('hidden');
+        });
+
+        // Handle HTMX errors
+        document.body.addEventListener('htmx:responseError', function(event) {
+            console.error('HTMX Error:', event.detail);
+            alert('An error occurred. Please try again.');
+        });
+    </script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

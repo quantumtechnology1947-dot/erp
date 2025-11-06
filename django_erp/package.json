@@ -1,0 +1,27 @@
+{
+  "name": "django-erp",
+  "version": "0.1.0",
+  "description": "Modern ERP system with Django, HTMX, and Tailwind CSS",
+  "scripts": {
+    "dev": "concurrently \"npm run watch:css\" \"python manage.py runserver\"",
+    "watch:css": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch",
+    "build:css": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --minify",
+    "build": "npm run build:css"
+  },
+  "keywords": [
+    "django",
+    "erp",
+    "htmx",
+    "tailwindcss"
+  ],
+  "author": "ERP Development Team",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  }
+}
